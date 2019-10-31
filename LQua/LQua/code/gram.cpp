@@ -165,25 +165,32 @@ int Grammer::assignment(FuncDesc& fs, VarDesc& var_desc, int vars)
 	return 0;
 }
 
+void Grammer::explist(FuncDesc& fs, ExprlistDesc& exprlist_desc)
+{
+}
+
 /*
 explist1 -> expr {',' expr}
 
 expr 含义：
-	expr 可以为全局变量、局部变量、运算符表达式
-	{
-		
-	}
+expr 可以为全局变量、局部变量、运算符表达式
+{
+
+}
 */
-void Grammer::explist(FuncDesc& fs, ExprlistDesc& exprlist_desc)
+void Grammer::explist1(FuncDesc& fs, ExprlistDesc& exprlist_desc)
 {
 	exprlist_desc.expr_num_ = 1;
 	VarDesc var_desc;
 	expr(fs, var_desc);
-}
 
-void Grammer::explist1(FuncDesc& fs, ExprlistDesc& expr_desc)
-{
-
+	while (TK_COMMA == cur_token_.token_type_) // 多表达式
+	{
+		++exprlist_desc.expr_num_;
+		code_push_var(fs, var_desc);
+		next_token();
+		expr(fs, var_desc);
+	}
 }
 
 /*
@@ -194,6 +201,16 @@ and 、or 运算符执行短路计算，and 取第一个false表达式， or 取第一个true表达式
 void Grammer::expr(FuncDesc& fs, VarDesc& var_desc)
 {
 	binop_expr(fs, var_desc);
+
+	while (cur_token_.token_type_ == TK_ADD || cur_token_.token_type_ == TK_OR)
+	{
+		code_push_var(fs, var_desc); // is needed ?
+		int src_pc = code_op_arg(fs, TK_ADD == cur_token_.token_type_ ? OP_ON_FALSE_JMP : OP_ON_TRUE_JMP, 0);
+		next_token();
+		binop_expr(fs, var_desc);
+		code_push_var(fs, var_desc);
+		fix_jump_to_next(fs, src_pc); // 回填跳转位置
+	}
 }
 
 void Grammer::expr_code_var(FuncDesc& fs)
@@ -204,13 +221,29 @@ void Grammer::expr_code_var(FuncDesc& fs)
 /*
 binop_expr -> unary_expr { binop unary_expr }
 
-表达式求值，中缀表达式转后缀表达式
+表达式求值，中缀表达式转后缀表达式 -> 生成指令
 */
 void Grammer::binop_expr(FuncDesc& fs, VarDesc& var_desc)
 {
 	OpStack op_stack;
 	op_stack.top_ = 0;
 	unary_expr(fs, var_desc, op_stack);
+
+	while (g_bin_ops[cur_token_.token_type_].priority_ > 0)
+	{
+		code_push_var(fs, var_desc); // ? is needed
+		code_higher_op(fs, op_stack, g_bin_ops[cur_token_.token_type_].priority_);
+		push_op(op_stack, g_bin_ops[cur_token_.token_type_]);
+
+		next_token();
+		unary_expr(fs, var_desc, op_stack);
+		code_push_var(fs, var_desc);
+	}
+
+	if (op_stack.top_ > 0)
+	{
+		code_higher_op(fs, op_stack, 0);
+	}
 }
 
 /* unary_expr -> { not | '-' } simple_exp */
@@ -237,10 +270,12 @@ void Grammer::simple_expr(FuncDesc& fs, VarDesc& var_desc)
 	}
 	case TK_STRING:
 	{
+		next_token();
 		break;
 	}
 	case TK_NIL:
 	{
+		next_token();
 		break;
 	}
 	case TK_NAME:
@@ -249,6 +284,7 @@ void Grammer::simple_expr(FuncDesc& fs, VarDesc& var_desc)
 	}
 	case TK_L_PAREN:
 	{
+		check_next(TK_R_PAREN);
 		break;
 	}
 	case TK_L_BRACES:
@@ -444,6 +480,52 @@ int Grammer::code_op_arg(FuncDesc& fs, OpCode op, int arg)
 	fs.proto_->AddLineOpCode(op, pre_line_);
 	fs.proto_->codes_.Add(arg);
 	return fs.proto_->codes_.size() - 2;
+}
+
+void Grammer::code_push_var(FuncDesc& fs, VarDesc& var_desc)
+{
+	switch (var_desc.var_type_)
+	{
+	case VarType_Local:
+		code_op_arg(fs, OP_PUSH_LOCAL, var_desc.info_); // info_ local为栈位置
+		break;
+	case VarType_Global:
+		code_op_arg(fs, OP_GET_GLOBAL, var_desc.info_); // info_ global为变量名的常量索引
+		break;
+	case VarType_Dot:
+		code_op_arg(fs, OP_TABLE_DOT_GET, var_desc.info_); // info_ dot为常量索引
+		break;
+	case VarType_Indexed:
+		code_op(fs, OP_TABLE_INDEXED_GET);
+		break;
+	case VarType_FuncExpr:
+		// info_ expr为call指令pc
+		break;
+	default:
+		break;
+	}
+	var_desc.Reset();
+}
+
+void Grammer::code_store_var(FuncDesc& fs, VarDesc& var_desc)
+{
+
+}
+
+void Grammer::fix_jump_to_next(FuncDesc& fs, int src_pc)
+{
+	fix_jump_dest(fs, src_pc, fs.proto_->codes_.size());
+}
+
+void Grammer::fix_jump_dest(FuncDesc& fs, int src_pc, int dest_pc)
+{
+	int offset = dest_pc - (src_pc + 2);
+	fs.proto_->codes_[src_pc + 1] = offset;
+}
+
+void Grammer::fix_op_arg(FuncDesc& fs, int pc, int arg)
+{
+	fs.proto_->codes_[pc] = arg;
 }
 
 void Grammer::push_op(OpStack& op_stack, OpCodePriority op_priority)

@@ -105,43 +105,43 @@ enum TokenType
 
 enum OpCode
 {
-	OP_PUSH_NIL = 1,          /* [nil数量] */
-	OP_POP,                   /* [弹出数量] */
-	OP_SET_GLOBAL,            /* [常量索引] */
-	OP_GET_GLOBAL,            /* [常量索引] */
-	OP_PUSH_CONSTANT,         /* [常量索引] */
-	OP_PUSH_LOCAL,            /* [局部变量索引] */
-	OP_SET_LOCAL,             /* [局部变量索引] */
-	OP_NOT,                   /* [] */
-	OP_MINUS,                 /* [] */
-	OP_EQ,                    /* [] */
-	OP_NE,                    /* [] */
-	OP_GT,                    /* [] */
-	OP_LT,                    /* [] */
-	OP_GE,                    /* [] */
-	OP_LE,                    /* [] */
-	OP_CONCAT,                /* [] */
-	OP_ADD,                   /* [] */
-	OP_SUB,                   /* [] */
-	OP_MUL,                   /* [] */
-	OP_DIV,                   /* [] */
-	OP_ON_TRUE_JMP,           /* [跳转偏移] */
-	OP_ON_FALSE_JMP,          /* [跳转偏移] */
-	OP_IF_FALSE_JMP,          /* [跳转偏移] */
-	OP_JMP,                   /* [跳转偏移] */
-	OP_CALL,                  /* [返回值数] [参数个数] */
-	OP_RETURN,                /* [函数体活跃的局部变量总数] */
-	OP_TAILCALL,              /* [函数体活跃的局部变量总数] [参数个数] */
-	OP_SET_ARRAY,             /* [字段数量] */
-	OP_SET_HASH,              /* [字段数量] */
-	OP_NEW_TABLE,             /* [数组长度] [哈希长度] */
-	OP_SET_TABLE,             /* [table/index和value中间间隔的堆栈数] */
-	OP_SET_TABLE_AND_POP,     /* [] */
-	OP_TABLE_DOT_GET,         /* [常量索引] */
-	OP_TABLE_INDEXED_GET,     /* [] */
-	OP_FOR_INIT,              /* [跳转偏移] */
-	OP_FOR_LOOP,              /* [跳转偏移] */
-	END_CODE,
+	OP_PUSH_NIL = 1,          /* [1] [nil数量] */  // [参数个数] [指令解释] 
+	OP_POP,                   /* [1] [弹出数量] */
+	OP_SET_GLOBAL,            /* [1] [常量索引] */
+	OP_GET_GLOBAL,            /* [1] [常量索引] */
+	OP_PUSH_CONSTANT,         /* [1] [常量索引] */
+	OP_PUSH_LOCAL,            /* [1] [局部变量索引] */
+	OP_SET_LOCAL,             /* [1] [局部变量索引] */
+	OP_NOT,                   /* [0] [] */
+	OP_MINUS,                 /* [0] [] */
+	OP_EQ,                    /* [0] [] */
+	OP_NE,                    /* [0] [] */
+	OP_GT,                    /* [0] [] */
+	OP_LT,                    /* [0] [] */
+	OP_GE,                    /* [0] [] */
+	OP_LE,                    /* [0] [] */
+	OP_CONCAT,                /* [0] [] */
+	OP_ADD,                   /* [0] [] */
+	OP_SUB,                   /* [0] [] */
+	OP_MUL,                   /* [0] [] */
+	OP_DIV,                   /* [0] [] */
+	OP_ON_TRUE_JMP,           /* [1] [跳转偏移] */
+	OP_ON_FALSE_JMP,          /* [1] [跳转偏移] */
+	OP_IF_FALSE_JMP,          /* [1] [跳转偏移] */
+	OP_JMP,                   /* [1] [跳转偏移] */
+	OP_CALL,                  /* [2] [返回值数] [参数个数] */
+	OP_RETURN,                /* [1] [函数体活跃的局部变量总数] */
+	OP_TAILCALL,              /* [2] [函数体活跃的局部变量总数] [参数个数] */
+	OP_SET_ARRAY,             /* [1] [字段数量] */
+	OP_SET_HASH,              /* [1] [字段数量] */
+	OP_NEW_TABLE,             /* [2] [数组长度] [哈希长度] */
+	OP_SET_TABLE,             /* [1] [table/index和value中间间隔的堆栈数] */
+	OP_SET_TABLE_AND_POP,     /* [0] [] */
+	OP_TABLE_DOT_GET,         /* [1] [常量索引] */
+	OP_TABLE_INDEXED_GET,     /* [0] [] */
+	OP_FOR_INIT,              /* [1] [跳转偏移] */
+	OP_FOR_LOOP,              /* [1] [跳转偏移] */
+	END_CODE,				  /* [0] [跳转偏移] */
 
 	OP_MAX,
 };

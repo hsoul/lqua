@@ -7,6 +7,7 @@
 
 enum VarType
 {
+	VarType_None = -1,
 	VarType_Global = 0, // 全局变量，如 a
 	VarType_Local, // 局部变量，如 local b
 	VarType_Dot, // table成员，如 a.b
@@ -80,7 +81,7 @@ public:
 	}
 	void Reset() 
 	{
-		var_type_ = VarType_FuncExpr;
+		var_type_ = VarType_None;
 		info_ = 0;
 	}
 	void AsGlobal(int const_index)
@@ -169,8 +170,8 @@ public:
 
 	int func_call(FuncDesc& fs);
 	int assignment(FuncDesc& fs, VarDesc& var_desc, int vars);
-	void explist(FuncDesc& fs, ExprlistDesc& expr_desc);
-	void explist1(FuncDesc& fs, ExprlistDesc& expr_desc);
+	void explist(FuncDesc& fs, ExprlistDesc& exprlist_desc);
+	void explist1(FuncDesc& fs, ExprlistDesc& exprlist_desc);
 	void expr(FuncDesc& fs, VarDesc& var_desc);
 	void expr_code_var(FuncDesc& fs);
 	void binop_expr(FuncDesc& fs, VarDesc& var_desc);
@@ -212,6 +213,11 @@ private:
 	void code_op(FuncDesc& fs, OpCode op);
 	void code_arg(FuncDesc& fs, int arg);
 	int code_op_arg(FuncDesc& fs, OpCode op, int arg); // 返回指令pc
+	void code_push_var(FuncDesc& fs, VarDesc& var_desc);
+	void code_store_var(FuncDesc& fs, VarDesc& var_desc);
+	void fix_jump_to_next(FuncDesc& fs, int src_pc);
+	void fix_jump_dest(FuncDesc& fs, int src_pc, int dest_pc);
+	void fix_op_arg(FuncDesc& fs, int pc, int arg);
 private:
 	void push_op(OpStack& op_stack, OpCodePriority priority);
 	void code_higher_op(FuncDesc& fs, OpStack& op_stack, int priority);
