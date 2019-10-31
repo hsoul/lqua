@@ -165,7 +165,7 @@ public:
 	bool stat(FuncDesc& fs);
 
 	void name_stat(FuncDesc& fs);
-	void var_or_func(FuncDesc& fs, VarDesc& var_desc);
+	void var_or_func(FuncDesc& fs, VarDesc& var_desc); // return var_desc
 	void var_or_func_suffix(FuncDesc& fs, VarDesc& var_desc);
 
 	int func_call(FuncDesc& fs);

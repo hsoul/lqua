@@ -50,7 +50,7 @@ HashNum TObject::StrHash() const
 void TObject::SetShortString(const char* str, int len)
 {
 	short_str_len_ = MIN_VAL(len, SHORT_STR_SIZE);
-	for (int i = 0; i < short_str_len_; ++i)
+	for (Byte i = 0; i < short_str_len_; ++i)
 	{
 		value_.short_str_[i] = str[i];
 	}

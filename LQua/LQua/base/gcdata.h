@@ -110,7 +110,7 @@ public:
 	}
 	void Add(T* value)
 	{
-		lists_[cur->hash_num_ % capacity_].InsertHead(value);
+		lists_[value->hash_num_ % capacity_].InsertHead(value);
 		if (++used_num_ > capacity_)
 		{
 			Resize(capacity_ * 2);
@@ -123,10 +123,10 @@ public:
 	}
 	T* Find(const T& value)
 	{
-		T* cur = lists_[value->hash_num_ % capacity_].head_;
+		T* cur = lists_[value.hash_num_ % capacity_].head_;
 		while (cur)
 		{
-			if (value.Equal(cur))
+			if (value.Equal(*cur))
 				return cur;
 			cur = cur->gc_.next_;
 		}

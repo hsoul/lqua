@@ -9,8 +9,6 @@ int main()
 	InitConstants();
 
 	// Test::TestArray();
-	char a[3] = { 'g', 'l', '\0' };
-	printf("str len %d\n", ::strlen(a));
 
 	LQState lqstate;
 	lqstate.ExecuteFile("test.lua");

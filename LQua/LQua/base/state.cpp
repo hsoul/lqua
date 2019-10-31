@@ -51,7 +51,7 @@ void LQState::NewString(TObject& obj, const char* str, int length, const char* p
 
 	obj_str = Allocator<ObjectString>::New(FUNC_NAME, pre_func); // ÐÂ×Ö·û´®
 	obj_str->str_ = Allocator<char>::NewArray(length + 1, FUNC_NAME, pre_func);
-	::memccpy(obj_str->str_, str, length);
+	::memcpy(obj_str->str_, str, length);
 	obj_str->length_ = length;
 	obj_str->hash_num_ = temp_string.hash_num_;
 	obj_str->gc_.state_ = state;

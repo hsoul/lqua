@@ -121,6 +121,8 @@ void Grammer::var_or_func_suffix(FuncDesc& fs, VarDesc& var_desc)
 		{
 		case TK_L_PAREN: // (
 		{
+			code_push_var(fs, var_desc);
+			var_desc.AsFuncExpr(func_call(fs));
 			break;
 		}
 		case TK_L_SQUARE: // [
