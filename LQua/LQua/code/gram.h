@@ -169,7 +169,7 @@ public:
 	void var_or_func_suffix(FuncDesc& fs, VarDesc& var_desc);
 
 	int func_call(FuncDesc& fs);
-	int assignment(FuncDesc& fs, VarDesc& var_desc, int vars);
+	int assignment(FuncDesc& fs, VarDesc& var_desc, int var_nums);
 	void explist(FuncDesc& fs, ExprlistDesc& exprlist_desc);
 	void explist1(FuncDesc& fs, ExprlistDesc& exprlist_desc);
 	void expr(FuncDesc& fs, VarDesc& var_desc);
@@ -218,6 +218,9 @@ private:
 	void fix_jump_to_next(FuncDesc& fs, int src_pc);
 	void fix_jump_dest(FuncDesc& fs, int src_pc, int dest_pc);
 	void fix_op_arg(FuncDesc& fs, int pc, int arg);
+	void adjust_multi_assign(FuncDesc& fs, int need_num, ExprlistDesc& exprlist_desc);
+	void adjust_stack(FuncDesc& fs, int need_num);
+	void fix_func_returns(FuncDesc& fs, int call_pc, int result_num);
 private:
 	void push_op(OpStack& op_stack, OpCodePriority priority);
 	void code_higher_op(FuncDesc& fs, OpStack& op_stack, int priority);

@@ -1,5 +1,6 @@
 #include "gram.h"
 #include "../base/const.h"
+#include "../base/dump.h"
 
 ObjectProto* Grammer::Parse(LQState* ls, const char* file_name)
 {
@@ -40,7 +41,7 @@ void Grammer::open_func(FuncDesc& fs, FuncDesc* pre_func)
 
 void Grammer::close_func(FuncDesc& fs)
 {
-
+	code_op(fs, END_CODE);
 }
 
 void Grammer::chunk(FuncDesc& fs)
@@ -121,7 +122,7 @@ void Grammer::var_or_func_suffix(FuncDesc& fs, VarDesc& var_desc)
 		{
 		case TK_L_PAREN: // (
 		{
-			code_push_var(fs, var_desc);
+			code_push_var(fs, var_desc); // 将前面的值类型生成执行指令
 			var_desc.AsFuncExpr(func_call(fs));
 			break;
 		}
@@ -139,15 +140,59 @@ void Grammer::var_or_func_suffix(FuncDesc& fs, VarDesc& var_desc)
 	}
 }
 
+/*
+函数语句解析
+函数调用过程 = {
+	1 = 将函数proto压栈
+	2 = 生成CALL指令
+	3 = 返回CALL指令pc
+}
+
+如: function add(a,b) return a+b end;  c=add(100,200);
+	生成如下指令 = {
+		[01] PUSH_CONSTANT   proto(add)
+		[03] SET_GLOBAL      'add'
+		[05] GET_GLOBAL      'add'
+		[07] PUSH_NUMBER     100
+		[09] PUSH_NUMBER     200
+		[11] OP_CALL         1 2
+		[14] SET_GLOBAL      c
+	}
+
+function add() 等同于 add = function() ...
+*/
 int Grammer::func_call(FuncDesc& fs)
 {
+	int params = 1;
+	int result = 0;
+
+	switch (cur_token_.token_type_)
+	{
+	case TK_L_PAREN:
+	{
+		next_token();
+		ExprlistDesc exprlist_desc;
+		explist(fs, exprlist_desc);
+		check_next(TK_R_PAREN);
+
+		params = exprlist_desc.expr_num_;
+		// fix_func_returns(fs, exprlist_desc.call_pc_, 1);
+	}
+	default:
+		break;
+	}
+
 	return 0;
 }
 
-int Grammer::assignment(FuncDesc& fs, VarDesc& var_desc, int vars)
+/*
+多变量赋值
+	1 表达式列表 按照 从左到右 顺序生成指令
+	2 变量列表 按照 从右到左 顺序生成指令
+例如 a,b=1,2; 指令为： push 1 -> push 2 -> set b -> set a 
+*/
+int Grammer::assignment(FuncDesc& fs, VarDesc& var_desc, int var_nums)
 {
-	int left = 0;
-
 	if (var_desc.var_type_ == VarType_Dot)
 	{
 
@@ -155,20 +200,39 @@ int Grammer::assignment(FuncDesc& fs, VarDesc& var_desc, int vars)
 
 	if (cur_token_.token_type_ == TK_COMMA) // 多变量赋值
 	{
-
+		next_token();
+		VarDesc v2;
+		var_or_func(fs, v2);
+		if (VarType_FuncExpr == v2.var_type_)
+			error("var syntax error");
+		assignment(fs, v2, var_nums + 1); // 递归进入直到 =, 顺序解析表达式列表生成 push 指令， 然后递归返回逆序生成 set 指令
 	}
-	else // 解析=右边的表达式列表， 生成n组指令
+	else // 解析=右边的表达式列表， 生成n组指令 // 多重赋值递归到此， 此时 vars = 等号左边变量个数 
 	{
 		check_next(TK_ASSIGN);
-		ExprlistDesc desc;
-		explist1(fs, desc);
+		ExprlistDesc exprlist_desc;
+		explist1(fs, exprlist_desc);
+		adjust_multi_assign(fs, var_nums, exprlist_desc);
 	}
+
+	code_store_var(fs, var_desc);
 
 	return 0;
 }
 
+// return 返回值列表，或func参数列表，explist可以为空列表，exprlist1不可以为空
 void Grammer::explist(FuncDesc& fs, ExprlistDesc& exprlist_desc)
 {
+	switch (cur_token_.token_type_)
+	{
+	case TK_SEMICOLON: case TK_R_PAREN: case TK_EOF:
+	case TK_ELSE: case TK_ELSEIF: case TK_END:
+		exprlist_desc.Reset();
+		break;
+	default:
+		explist1(fs, exprlist_desc);
+		break;
+	}
 }
 
 /*
@@ -189,7 +253,7 @@ void Grammer::explist1(FuncDesc& fs, ExprlistDesc& exprlist_desc)
 	while (TK_COMMA == cur_token_.token_type_) // 多表达式
 	{
 		++exprlist_desc.expr_num_;
-		code_push_var(fs, var_desc);
+		code_push_var(fs, var_desc); // push ',' 前一个表达式
 		next_token();
 		expr(fs, var_desc);
 	}
@@ -511,7 +575,17 @@ void Grammer::code_push_var(FuncDesc& fs, VarDesc& var_desc)
 
 void Grammer::code_store_var(FuncDesc& fs, VarDesc& var_desc)
 {
-
+	switch (var_desc.var_type_)
+	{
+	case VarType_Local:
+		code_op_arg(fs, OP_SET_LOCAL, var_desc.info_);
+		break;
+	case VarType_Global:
+		code_op_arg(fs, OP_SET_GLOBAL, var_desc.info_);
+		break;
+	default:
+		break;
+	}
 }
 
 void Grammer::fix_jump_to_next(FuncDesc& fs, int src_pc)
@@ -528,6 +602,26 @@ void Grammer::fix_jump_dest(FuncDesc& fs, int src_pc, int dest_pc)
 void Grammer::fix_op_arg(FuncDesc& fs, int pc, int arg)
 {
 	fs.proto_->codes_[pc] = arg;
+}
+
+// 在多重赋值表达式里，函数调用若为最后一个表达式，返回值数量动态调整
+void Grammer::adjust_multi_assign(FuncDesc & fs, int need_num, ExprlistDesc & exprlist_desc)
+{
+	int left_need = need_num - exprlist_desc.expr_num_;
+	adjust_stack(fs, left_need);
+}
+
+void Grammer::adjust_stack(FuncDesc& fs, int need_num)
+{
+	if (need_num > 0)
+		code_op_arg(fs, OP_PUSH_NIL, need_num);
+	else if (need_num < 0)
+		code_op_arg(fs, OP_POP, -need_num);
+}
+
+void Grammer::fix_func_returns(FuncDesc& fs, int call_pc, int result_num)
+{
+
 }
 
 void Grammer::push_op(OpStack& op_stack, OpCodePriority op_priority)

@@ -1,6 +1,7 @@
 #include "state.h"
 #include "../code/gram.h"
 #include "../vm/vm.h"
+#include "../base/dump.h"
 
 LQState::LQState()
 {
@@ -20,6 +21,7 @@ void LQState::ExecuteFile(const char* file_name)
 {
 	Grammer gram;
 	ObjectProto* proto = gram.Parse(this, file_name);
+	DumpProto(proto, 0);
 	VM::Run(this, proto);
 }
 

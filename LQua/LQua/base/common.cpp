@@ -29,7 +29,7 @@ char FileReader::NextChar()
 
 bool FileWriter::Open(const char* file_name)
 {
-	file_ = ::fopen(file_name, "W+");
+	file_ = ::fopen(file_name, "w+");
 	return (nullptr != file_);
 }
 
