@@ -126,24 +126,24 @@ TObject BuiltIn::ObjectToString(LQState* ls, TObject obj)
 	switch (obj.object_type_)
 	{
 	case ObjectType_NIL:
-		buff.set_str("nil");
+		buff.SetStr("nil");
 		break;
 	case ObjectType_Number:
-		buff.format(NUMBER_FMT, NUM_VAL(obj));
+		buff.Format(NUMBER_FMT, NUM_VAL(obj));
 		break;
 	case ObjectType_CProto:
-		buff.format("cproto %p", obj.value_.c_func_);
+		buff.Format("cproto %p", obj.value_.c_func_);
 		break;
 	case ObjectType_String:
 		return obj;
 	case ObjectType_Proto:
-		buff.format("proto %p", obj.value_.proto_);
+		buff.Format("proto %p", obj.value_.proto_);
 		break;
 	case ObjectType_Table:
-		buff.format("table %p", obj.value_.table_);
+		buff.Format("table %p", obj.value_.table_);
 		break;
 	default:
-		buff.set_str("unknown");
+		buff.SetStr("unknown");
 		break;
 	}
 	TObject result;

@@ -25,18 +25,21 @@ inline std::string itoa(long long i)
 }
 
 template<int BUFF_SIZE>
-struct StaticString {
-	StaticString() {
+struct StaticString
+{
+	StaticString()
+	{
 		length_ = 0;
 		datas_[length_] = '\0';
 	}
-	StaticString(const char* str) {
+	StaticString(const char* str)
+	{
 		length_ = 0;
 		datas_[length_] = '\0';
-		set_str(str);
+		SetStr(str);
 	}
-	void clear() { length_ = 0; }
-	void set_str(const char* str)
+	void Clear() { length_ = 0; }
+	void SetStr(const char* str)
 	{
 		if (str) 
 		{
@@ -49,14 +52,14 @@ struct StaticString {
 			datas_[length_] = '\0';
 		}
 	}
-	void append(char c) 
+	void Append(char c) 
 	{
 		if (length_ < BUFF_SIZE) 
 		{
 			datas_[length_++] = c;
 		}
 	}
-	void format(const char* fmt, ...)
+	void Format(const char* fmt, ...)
 	{
 		va_list ap;
 		va_start(ap, fmt);
@@ -64,12 +67,11 @@ struct StaticString {
 		va_end(ap);
 		datas_[length_] = '\0';
 	}
-
 	bool operator == (const StaticString& other) const 
 	{
 		return length_ == other.length_ && strncmp(datas_, other.datas_, length_) == 0;
 	}
-	bool operator <(const StaticString& other) const 
+	bool operator < (const StaticString& other) const 
 	{
 		if (length_ != other.length_)
 		{

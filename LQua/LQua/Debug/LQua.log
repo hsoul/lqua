@@ -1,17 +1,3 @@
-﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppClean.targets(76,5): warning : The process cannot access the file 'f:\hsoul\slua\lqua\debug\lqua.pdb' because it is being used by another process.
-  vm.cpp
-  test.cpp
-  main.cpp
-  builtin.cpp
-  lex.cpp
-  gram.cpp
-  table.cpp
-  state.cpp
-  memory.cpp
-  lobject.cpp
-  dump.cpp
-  const.cpp
-  common.cpp
-  Generating Code...
+﻿  builtin.cpp
   LQua.vcxproj -> F:\hsoul\slua\LQua\Debug\LQua.exe
   LQua.vcxproj -> F:\hsoul\slua\LQua\Debug\LQua.pdb (Partial PDB)
