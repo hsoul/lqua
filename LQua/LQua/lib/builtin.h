@@ -26,7 +26,7 @@ private:
 	BUILT_IN_FUNC(tremove)
 	BUILT_IN_FUNC(tconcat)
 private:
-	static TObject GetParam(LQState* ls, int order, ObjectType object_type);
+	static TObject GetParam(LQState* ls, int index, ObjectType object_type);
 	static int ParamNum(LQState* ls);
 	static TObject ObjectToString(LQState* ls, TObject obj);
 private:

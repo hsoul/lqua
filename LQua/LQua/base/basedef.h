@@ -5,6 +5,7 @@
 #include <cstdarg>
 #include <vector>
 #include <map>
+#include <stack>
 
 class LQState;
 
@@ -49,6 +50,8 @@ enum
 	INIT_SIZE_STRING_SET = 1 << 6,
 	INIT_SIZE_CONSTANT = 1 << 4,
 	INIT_SIZE_CODE = 1 << 10,
+	INIT_SIZE_TABLE_ARRAY = 1 << 2,
+	INIT_SIZE_TABLE_HASH = 1 << 3,
 };
 
 enum TokenType
@@ -108,6 +111,7 @@ enum TokenType
 
 enum OpCode
 {
+	OP_NONE = 0,
 	OP_PUSH_NIL = 1,          /* [1] [nil数量] */  // [参数个数] [指令解释] 
 	OP_POP,                   /* [1] [弹出数量] */
 	OP_SET_GLOBAL,            /* [1] [常量索引] */
@@ -197,6 +201,29 @@ public:
 public:
 	const char* func_name_;
 	CFunction func_;
+};
+
+struct CFuncStackInfo
+{
+public:
+	CFuncStackInfo()
+		: params_num_(0)
+		, base_(0)
+		, result_base_(0)
+	{
+
+	}
+	CFuncStackInfo(int params_num, int base, int result_base)
+		: params_num_(params_num)
+		, base_(base)
+		, result_base_(result_base)
+	{
+
+	}
+public:
+	int params_num_;
+	int base_;
+	int result_base_;
 };
 
 struct LineInfo

@@ -124,6 +124,7 @@
     <ClInclude Include="code\gram.h" />
     <ClInclude Include="code\lex.h" />
     <ClInclude Include="lib\builtin.h" />
+    <ClInclude Include="base\lstring.h" />
     <ClInclude Include="test\test.h" />
     <ClInclude Include="vm\gc.h" />
     <ClInclude Include="vm\vm.h" />
@@ -148,6 +149,9 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Natvis Include="Array.natvis" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

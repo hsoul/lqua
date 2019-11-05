@@ -511,7 +511,7 @@ int Grammer::string_constant(FuncDesc& fs, const char* str)
 	return index;
 }
 
-int Grammer::number_constant(FuncDesc & fs, Number n)
+int Grammer::number_constant(FuncDesc& fs, Number n)
 {
 	for (int i = 0; i < fs.proto_->constants_.size(); ++i)
 	{

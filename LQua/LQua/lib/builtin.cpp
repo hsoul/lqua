@@ -1,22 +1,35 @@
 #include "builtin.h"
 #include "../base/state.h"
+#include "../base/lstring.h"
 
 CFuncInfo BuiltIn::c_funcs_[BUILT_IN_FUNC_NUM] = {
-	{ "tostring", BuiltIn::tostring },
+	/*{ "tostring", BuiltIn::tostring },*/
 	{ "print", BuiltIn::print },
-	{ "assert", BuiltIn::assert },
-	{ "floor", BuiltIn::floor },
-	{ "clock", BuiltIn::clock },
-	{ "getn", BuiltIn::getn },
-	{ "tnext", BuiltIn::tnext },
-	{ "tinsert", BuiltIn::tinsert },
-	{ "tremove", BuiltIn::tremove },
-	{ "tconcat", BuiltIn::tconcat },
+	//{ "assert", BuiltIn::assert },
+	//{ "floor", BuiltIn::floor },
+	//{ "clock", BuiltIn::clock },
+	//{ "getn", BuiltIn::getn },
+	//{ "tnext", BuiltIn::tnext },
+	//{ "tinsert", BuiltIn::tinsert },
+	//{ "tremove", BuiltIn::tremove },
+	//{ "tconcat", BuiltIn::tconcat },
 	{ NULL, NULL },
 };
 
-void BuiltIn::OpenLibs(LQState * ls)
+void BuiltIn::OpenLibs(LQState* ls)
 {
+	for (int i = 0; i < BUILT_IN_FUNC_NUM; ++i)
+	{
+		CFuncInfo& func_info = c_funcs_[i];
+		if (func_info.func_name_)
+		{
+			TObject key;
+			TObject value;
+			ls->NewString(key, func_info.func_name_, 0, FUNC_NAME, GCState_Fixed);
+			value.AsCFunc(func_info.func_);
+			ls->SetGlobal(key, value);
+		}
+	}
 }
 
 int BuiltIn::tostring(LQState* ls)
@@ -26,6 +39,19 @@ int BuiltIn::tostring(LQState* ls)
 
 int BuiltIn::print(LQState* ls)
 {
+	int params_num = ParamNum(ls);
+
+	for (int i = 1; i < params_num; ++i)
+	{
+		TObject obj = GetParam(ls, i, ObjectType_Unknown);
+		if (i > 1)
+		{
+			printf("\t");
+		}
+		printf("%s", ObjectToString(ls, obj).c_str());
+	}
+	printf("\n");
+
 	return 0;
 }
 
@@ -73,17 +99,55 @@ int BuiltIn::tconcat(LQState* ls)
 	return 0;
 }
 
-TObject BuiltIn::GetParam(LQState* ls, int order, ObjectType object_type)
+TObject BuiltIn::GetParam(LQState* ls, int index, ObjectType object_type)
 {
-	return TObject();
+	if (index < 1 || index > ls->c_func_info_.params_num_)
+	{
+		ls->error("wrong param index");
+	}
+	int address = ls->c_func_info_.base_ + index - 1;
+	TObject obj = stack_at(ls, address);
+	if (object_type != ObjectType_Unknown && obj.object_type_ != object_type)
+	{
+		ls->error("c function param type wrong");
+	}
+	return obj;
 }
 
 int BuiltIn::ParamNum(LQState* ls)
 {
-	return 0;
+	return ls->c_func_info_.params_num_;
 }
 
 TObject BuiltIn::ObjectToString(LQState* ls, TObject obj)
 {
-	return TObject();
+	ShortString buff;
+
+	switch (obj.object_type_)
+	{
+	case ObjectType_NIL:
+		buff.set_str("nil");
+		break;
+	case ObjectType_Number:
+		buff.format(NUMBER_FMT, NUM_VAL(obj));
+		break;
+	case ObjectType_CProto:
+		buff.format("cproto %p", obj.value_.c_func_);
+		break;
+	case ObjectType_String:
+		return obj;
+	case ObjectType_Proto:
+		buff.format("proto %p", obj.value_.proto_);
+		break;
+	case ObjectType_Table:
+		buff.format("table %p", obj.value_.table_);
+		break;
+	default:
+		buff.set_str("unknown");
+		break;
+	}
+	TObject result;
+	ls->NewString(result, buff.datas_, buff.length_, FUNC_NAME, GCState_NoMark);
+	
+	return result;
 }

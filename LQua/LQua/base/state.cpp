@@ -75,6 +75,11 @@ ObjectTable* LQState::NewTable(int array_size, int hash_size, const char* pre_fu
 	return obj;
 }
 
+void LQState::SetGlobal(const TObject& key, const TObject& value)
+{
+	globals_.Set(key, value);
+}
+
 void LQState::OpenState()
 {
 
