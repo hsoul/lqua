@@ -70,8 +70,10 @@ bool Grammer::stat(FuncDesc& fs)
 	case TK_LOCOAL:
 		break;
 	case TK_FUNCTION:
+		func_stat(fs);
 		break;
 	case TK_RETURN:
+		return_stat(fs);
 		break;
 	case TK_BREAK: case TK_CONTINUE:
 		break;
@@ -143,7 +145,7 @@ void Grammer::var_or_func_suffix(FuncDesc& fs, VarDesc& var_desc)
 /*
 函数语句解析
 函数调用过程 = {
-	1 = 将函数proto压栈
+	1 = 将函数proto、参数列表压栈
 	2 = 生成CALL指令
 	3 = 返回CALL指令pc
 }
@@ -163,8 +165,8 @@ function add() 等同于 add = function() ...
 */
 int Grammer::func_call(FuncDesc& fs)
 {
-	int params = 1;
-	int result = 0;
+	int params_num = 1;
+	int result_num = 0;
 
 	switch (cur_token_.token_type_)
 	{
@@ -174,15 +176,18 @@ int Grammer::func_call(FuncDesc& fs)
 		ExprlistDesc exprlist_desc;
 		explist(fs, exprlist_desc);
 		check_next(TK_R_PAREN);
-
-		params = exprlist_desc.expr_num_;
-		// fix_func_returns(fs, exprlist_desc.call_pc_, 1);
+		params_num = exprlist_desc.expr_num_;
+		if (exprlist_desc.call_pc_ > 0) // 如果 call_pc_ > 0 说明最后一个参数列表表达式为函数调用
+			fix_func_returns(fs, exprlist_desc.call_pc_, 1); // 如果函数调用为函数列表最后一个参数，此函数返回值数量设置为 1
 	}
 	default:
 		break;
 	}
+	code_op(fs, OP_CALL);
+	code_arg(fs, result_num); // 返回值数量由接收方决定，先设置为0
+	code_arg(fs, params_num);
 
-	return 0;
+	return fs.proto_->codes_.size() - 3;
 }
 
 /*
@@ -257,6 +262,8 @@ void Grammer::explist1(FuncDesc& fs, ExprlistDesc& exprlist_desc)
 		next_token();
 		expr(fs, var_desc);
 	}
+
+	code_push_var(fs, var_desc);
 }
 
 /*
@@ -346,6 +353,7 @@ void Grammer::simple_expr(FuncDesc& fs, VarDesc& var_desc)
 	}
 	case TK_NAME:
 	{
+		var_or_func(fs, var_desc);
 		break;
 	}
 	case TK_L_PAREN:
@@ -433,29 +441,62 @@ void Grammer::local_stat(FuncDesc& fs)
 
 }
 
-void Grammer::save_localvar(FuncDesc& fs, const SymbolString& name, int var_index)
+void Grammer::save_localvar(FuncDesc& fs, const SymbolString& name, int var_index) // 每次var_index从0开始加， 实际index = local_value_num_ + var_index // 注意 ：调用后必须将
 {
-
+	if (fs.local_value_num_ + var_index + 1 > GRAM_LOCAL_VARS)
+		error("too many local variables");
+	fs.local_vars_[fs.local_value_num_ + var_index] = name;
 }
 
+// func_stat -> FUNCTION funcname body
 void Grammer::func_stat(FuncDesc& fs)
 {
-
+	next_token();
+	VarDesc var_desc;
+	func_name(fs, var_desc);
+	body(fs);
 }
 
 void Grammer::func_name(FuncDesc& fs, VarDesc& var_desc)
 {
-
+	search_var(fs, var_desc);
 }
 
 void Grammer::body(FuncDesc& fs)
 {
+	FuncDesc sub_func_desc;
+	open_func(sub_func_desc, &fs);
 
+	check_next(TK_L_PAREN); // 参数列表
+	parlist(sub_func_desc);
+	check_next(TK_R_PAREN);
+
+	chunk(sub_func_desc);
+	check_next(TK_END);
+	close_func(sub_func_desc);
+
+	TObject obj;
+	obj.AsProto(sub_func_desc.proto_);
+	fs.proto_->constants_.Add(obj);
+
+	code_op_arg(fs, OP_PUSH_CONSTANT, fs.proto_->constants_.size() - 1);
 }
 
 void Grammer::parlist(FuncDesc& fs)
 {
+	int params_num = 0;
+	SymbolString param_name;
 
+	while (cur_token_.token_type_ == TK_NAME)
+	{
+		fetch_name(fs, param_name);
+		save_localvar(fs, param_name, params_num++);
+		if (!optional(TK_COMMA))
+			break;
+	}
+
+	fs.local_value_num_ += params_num;
+	fs.proto_->codes_[GRAM_CODE_ARG_NUM_POS] = params_num;
 }
 
 void Grammer::return_stat(FuncDesc& fs)
@@ -564,8 +605,8 @@ void Grammer::code_push_var(FuncDesc& fs, VarDesc& var_desc)
 	case VarType_Indexed:
 		code_op(fs, OP_TABLE_INDEXED_GET);
 		break;
-	case VarType_FuncExpr:
-		// info_ expr为call指令pc
+	case VarType_FuncExpr: // info_ expr为call指令pc
+		fix_func_returns(fs, var_desc.info_, 1); // 函数调用作为中间表达式（expression），返回值数量强制设置为1 
 		break;
 	default:
 		break;
@@ -619,9 +660,21 @@ void Grammer::adjust_stack(FuncDesc& fs, int need_num)
 		code_op_arg(fs, OP_POP, -need_num);
 }
 
+/*
+函数返回值数量自适应
+	f();				-- adjusted to 0
+	g(x, f());			-- f() is adjusted to 1
+	a, b, c = f(), x;	-- f() is adjusted to 1 result (and c gets nil)
+	a, b, c = x, f();	-- f() is adjuested to 2
+	a, b, c = f();		-- f() is adjusted to 3
+	return f();			-- return all values returned by f()
+*/
 void Grammer::fix_func_returns(FuncDesc& fs, int call_pc, int result_num)
 {
-
+	if (call_pc > 0)
+	{
+		fs.proto_->codes_[call_pc + 1] = result_num;
+	}
 }
 
 void Grammer::push_op(OpStack& op_stack, OpCodePriority op_priority)

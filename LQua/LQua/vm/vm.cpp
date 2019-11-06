@@ -70,6 +70,10 @@ int VM::Execute(LQState* ls, ObjectProto* proto, int base)
 				printf("proto excute end\n");
 				break;
 			}
+			case OP_CALL:
+			{
+				break;
+			}
 			default:
 				break;
 			}

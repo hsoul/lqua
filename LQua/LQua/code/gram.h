@@ -65,7 +65,7 @@ public:
 	FuncDesc* pre_func_;
 	std::map<SymbolString, int> string_indexs_; // 函数内常量字符串索引
 	int local_value_num_; // 函数内局部变量个数
-	std::string local_vars_[GRAM_LOCAL_VARS]; // 局部变量名称
+	SymbolString local_vars_[GRAM_LOCAL_VARS]; // 局部变量名称
 	LoopLabel* break_info_; // break、continue跳转信息
 	LoopLabel* continue_info_;
 };
@@ -130,7 +130,7 @@ public:
 	}
 public:
 	int expr_num_;
-	int call_pc_;
+	int call_pc_; // 若最后一个表达式为函数调用，记录call指令pc
 };
 
 struct TablePartDesc
