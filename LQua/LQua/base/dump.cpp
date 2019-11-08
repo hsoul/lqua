@@ -9,7 +9,7 @@ static FileWriter g_logger;
 static void InitOffset(int depth, std::string& str)
 {
 	str.clear();
-	for (int i = 1; i < depth; ++i)
+	for (int i = 1; i <= depth; ++i)
 	{
 		str.append(4, ' ');
 	}

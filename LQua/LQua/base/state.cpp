@@ -2,6 +2,8 @@
 #include "../code/gram.h"
 #include "../vm/vm.h"
 #include "../base/dump.h"
+#include "../test/test.h"
+#include "../lib/builtin.h"
 
 LQState::LQState()
 {
@@ -19,6 +21,7 @@ LQState::~LQState()
 
 void LQState::ExecuteFile(const char* file_name)
 {
+	// UseTime ut("execute");
 	Grammer gram;
 	ObjectProto* proto = gram.Parse(this, file_name);
 	DumpProto(proto, 0);
@@ -82,7 +85,7 @@ void LQState::SetGlobal(const TObject& key, const TObject& value)
 
 void LQState::OpenState()
 {
-
+	BuiltIn::OpenLibs(this);
 }
 
 void LQState::CloseState()

@@ -152,6 +152,7 @@
   </ItemGroup>
   <ItemGroup>
     <Natvis Include="Array.natvis" />
+    <Natvis Include="Table.natvis" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

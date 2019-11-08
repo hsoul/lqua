@@ -1,13 +1,24 @@
 
 ==================== CONSTANTS ====================
-[0] s
-[1] 5
-[2] 6
+[0] test
+[1] PROTO
+
+    ==================== CONSTANTS ====================
+    [0] 1
+
+    ==================== CODES ====================
+    [000] arg_num = 0
+    [001] OP_PUSH_CONSTANT		0
+    [003] OP_RETURN		0
+    [005] END_CODE
+[2] print
 
 ==================== CODES ====================
 [000] arg_num = 0
 [001] OP_PUSH_CONSTANT		1
-[003] OP_PUSH_CONSTANT		2
-[005] OP_ADD
-[006] OP_SET_GLOBAL		0
-[008] END_CODE
+[003] OP_SET_GLOBAL		0
+[005] OP_GET_GLOBAL		2
+[007] OP_GET_GLOBAL		0
+[009] OP_CALL		0		0
+[012] OP_CALL		0		1
+[015] END_CODE

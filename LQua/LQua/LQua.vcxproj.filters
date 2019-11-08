@@ -116,5 +116,6 @@
   </ItemGroup>
   <ItemGroup>
     <Natvis Include="Array.natvis" />
+    <Natvis Include="Table.natvis" />
   </ItemGroup>
 </Project>

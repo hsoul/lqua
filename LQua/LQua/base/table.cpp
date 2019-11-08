@@ -151,7 +151,7 @@ int Table::NumberKey(const TObject& key)
 
 Node* Table::SearchNode(const TObject& key)
 {
-	if (key.object_type_ == ObjectType_NIL)
+	if (key.object_type_ != ObjectType_NIL)
 	{
 		Node* pos = MainPosition(key);
 		while (pos)

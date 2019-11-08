@@ -102,7 +102,9 @@ void Grammer::name_stat(FuncDesc& fs)
 
 	if (var_desc.var_type_ == VarType_FuncExpr) // stat -> func(...)
 	{
-
+		if (var_desc.info_ == 0)
+			error("not function call");
+		fix_func_returns(fs, var_desc.info_, 0);
 	}
 	else // stat -> assignment
 	{
@@ -263,7 +265,10 @@ void Grammer::explist1(FuncDesc& fs, ExprlistDesc& exprlist_desc)
 		expr(fs, var_desc);
 	}
 
-	code_push_var(fs, var_desc);
+	if (var_desc.var_type_ == VarType_FuncExpr) // 如果最后一个表达式为函数调用，将call_pc_返回，用于设置返回值个数
+		exprlist_desc.call_pc_ = var_desc.info_;
+	else
+		code_push_var(fs, var_desc);
 }
 
 /*
@@ -455,6 +460,7 @@ void Grammer::func_stat(FuncDesc& fs)
 	VarDesc var_desc;
 	func_name(fs, var_desc);
 	body(fs);
+	code_store_var(fs, var_desc); // 1. gen variable  2. push proto  3. set variable by proto 
 }
 
 void Grammer::func_name(FuncDesc& fs, VarDesc& var_desc)
@@ -501,7 +507,22 @@ void Grammer::parlist(FuncDesc& fs)
 
 void Grammer::return_stat(FuncDesc& fs)
 {
+	ExprlistDesc exprlist_desc;
+	
+	next_token();
+	explist(fs, exprlist_desc);
 
+	if (exprlist_desc.call_pc_ > 0) // 返回值最后一个表达式为函数调用
+	{
+		fs.proto_->codes_[exprlist_desc.call_pc_] = OP_TAILCALL;
+		fs.proto_->codes_[exprlist_desc.call_pc_ + 1] = fs.local_value_num_;
+	}
+	else
+	{
+		code_op_arg(fs, OP_RETURN, fs.local_value_num_);
+	}
+
+	optional(TK_SEMICOLON);
 }
 
 void Grammer::search_var(FuncDesc& fs, VarDesc& var_desc)

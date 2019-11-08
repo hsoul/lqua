@@ -101,11 +101,11 @@ int BuiltIn::tconcat(LQState* ls)
 
 TObject BuiltIn::GetParam(LQState* ls, int index, ObjectType object_type)
 {
-	if (index < 1 || index > ls->c_func_info_.params_num_)
+	if (index < 1 || index > ls->c_stack_info_.params_num_)
 	{
 		ls->error("wrong param index");
 	}
-	int address = ls->c_func_info_.base_ + index - 1;
+	int address = ls->c_stack_info_.base_ + index - 1;
 	TObject obj = stack_at(ls, address);
 	if (object_type != ObjectType_Unknown && obj.object_type_ != object_type)
 	{
@@ -116,7 +116,7 @@ TObject BuiltIn::GetParam(LQState* ls, int index, ObjectType object_type)
 
 int BuiltIn::ParamNum(LQState* ls)
 {
-	return ls->c_func_info_.params_num_;
+	return ls->c_stack_info_.params_num_;
 }
 
 TObject BuiltIn::ObjectToString(LQState* ls, TObject obj)

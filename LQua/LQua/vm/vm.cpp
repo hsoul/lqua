@@ -60,6 +60,13 @@ int VM::Execute(LQState* ls, ObjectProto* proto, int base)
 			{
 				arg = codes[++pc];
 				ls->globals_.Set(proto->constants_[arg], stack_back(ls));
+				stack_pop(ls);
+				break;
+			}
+			case OP_GET_GLOBAL:
+			{
+				arg = codes[++pc];
+				stack_push_object(ls, ls->globals_.Get(proto->constants_[arg]));
 				break;
 			}
 			case END_CODE:
@@ -72,6 +79,16 @@ int VM::Execute(LQState* ls, ObjectProto* proto, int base)
 			}
 			case OP_CALL:
 			{
+				int results_num = codes[++pc];
+				int params_num = codes[++pc];
+				Call(ls, params_num, results_num);
+				break;
+			}
+			case OP_RETURN:
+			{
+				int local_var_nums = codes[++pc];
+				first_result = base + local_var_nums;
+				is_stop = true;
 				break;
 			}
 			default:
@@ -87,11 +104,6 @@ int VM::Execute(LQState* ls, ObjectProto* proto, int base)
 	}
 
 	return first_result;
-}
-
-int VM::CallCfunc(LQState* ls, CFunction func, int base)
-{
-	return 0;
 }
 
 Number VM::Caculate(Number n1, Number n2, OpCode op_code)
@@ -134,12 +146,60 @@ void VM::Concat(LQState* ls, const TObject& o1, const TObject& o2, TObject& resu
 
 void VM::Call(LQState* ls, int param_nums, int result_nums)
 {
+	int base = stack_top(ls) - param_nums; // base = func_index + 1 or first_param_index
+	TObject func = stack_at(ls, base - 1);
+	int first_result = 0;
 
+	if (func.object_type_ == ObjectType_Proto)
+		first_result = Execute(ls, func.value_.proto_, base);
+	else if (func.object_type_ == ObjectType_CProto)
+		first_result = CallCfunc(ls, func.value_.c_func_, base);
+	else
+		ls->error("function call not exit");
+
+	AdjustTop(ls, first_result + result_nums); // 调整返回值数量
+	
+	int func_base = base - 1;
+	for (int i = 0; i < result_nums; ++i) // 将 result1~resultN 移动到 func1~paramN的位置上
+	{
+		stack_at(ls, func_base + i) = stack_at(ls, first_result + i);
+	}
+
+	int extra = first_result - func_base; // funcBase ~ firstResult 之间func1和参数列表的总数
+	stack_pop_n(ls, extra);
 }
 
-void VM::AdjustTop(LQState* ls, int new_top)
+int VM::CallCfunc(LQState* ls, CFunction func, int base)
 {
+	CFuncStackInfo old_stack_info = ls->c_stack_info_;
+	int first_result = 0;
 
+	ls->c_stack_info_.params_num_ = stack_top(ls) - base;
+	ls->c_stack_info_.base_ = base;
+	ls->c_stack_info_.result_base_ = base + ls->c_stack_info_.params_num_;
+
+	(*func)(ls);
+
+	first_result = ls->c_stack_info_.result_base_;
+	ls->c_stack_info_ = old_stack_info;
+
+	return first_result;
+}
+
+void VM::AdjustTop(LQState* ls, int new_top) // 若实际返回值数和需要的返回值数不一致，需要增减保持一致
+{
+	int extra = stack_top(ls) - new_top;
+	if (extra >= 0) // 丢弃多余的返回值
+	{
+		stack_pop_n(ls, extra);
+	}
+	else // 填充缺少的返回值
+	{
+		while (extra++)
+		{
+			stack_push_nil(ls);
+		}
+	}
 }
 
 int VM::GetLine(ObjectProto* proto, int pc)

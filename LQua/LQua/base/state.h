@@ -41,6 +41,6 @@ public:
 	Table globals_; // 全局变量
 	HashSet<ObjectString> strings_;
 	GCList<ObjectTable> tables_;
-	CFuncStackInfo c_func_info_; // c 函数调用信息
+	CFuncStackInfo c_stack_info_; // c 函数调用信息
 	int cur_pc_; // 当前执行pc(program counter)
 };
