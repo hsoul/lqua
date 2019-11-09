@@ -74,7 +74,7 @@ struct VarDesc
 {
 public:
 	VarDesc()
-		: var_type_(VarType_FuncExpr)
+		: var_type_(VarType_None)
 		, info_(0)
 	{
 

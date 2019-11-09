@@ -359,7 +359,7 @@ void Grammer::simple_expr(FuncDesc& fs, VarDesc& var_desc)
 	case TK_NAME:
 	{
 		var_or_func(fs, var_desc);
-		break;
+		return;
 	}
 	case TK_L_PAREN:
 	{

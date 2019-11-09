@@ -41,7 +41,7 @@ int BuiltIn::print(LQState* ls)
 {
 	int params_num = ParamNum(ls);
 
-	for (int i = 1; i < params_num; ++i)
+	for (int i = 1; i <= params_num; ++i)
 	{
 		TObject obj = GetParam(ls, i, ObjectType_Unknown);
 		if (i > 1)

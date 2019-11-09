@@ -40,7 +40,7 @@ public:
 	void AsNumber(Number n) { object_type_ = ObjectType_Number; value_.num_ = n; }
 	void AsTable(ObjectTable* t) { object_type_ = ObjectType_Table; value_.table_ = t; }
 	void AsProto(ObjectProto* p) { object_type_ = ObjectType_Proto; value_.proto_ = p; }
-	void AsCFunc(CFunction f) { object_type_ = ObjectType_Proto; value_.c_func_ = f; }
+	void AsCFunc(CFunction f) { object_type_ = ObjectType_CProto; value_.c_func_ = f; }
 public:
 	union
 	{

@@ -8,7 +8,7 @@ int main()
 {
 	InitConstants();
 
-	Test::TestArray();
+	// Test::TestArray();
 
 	LQState lqstate;
 	lqstate.ExecuteFile("test.lua");

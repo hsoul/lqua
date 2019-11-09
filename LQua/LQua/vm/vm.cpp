@@ -74,7 +74,7 @@ int VM::Execute(LQState* ls, ObjectProto* proto, int base)
 				int top = stack_top(ls);
 				stack_pop_n(ls, top - base); // 弹出局部变量
 				is_stop = true;
-				printf("proto excute end\n");
+				// printf("proto excute end\n");
 				break;
 			}
 			case OP_CALL:
