@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2020-12-16T07:54:35.248Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36" etag="C3_9WyT8ZP4pwULAAyU9" version="14.0.3" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2020-12-16T08:05:46.702Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36" etag="cWWoGacysblNOns1HGX5" version="14.0.3" type="github" pages="3">
   <diagram id="kgpKYQtTHZ0yAKxKKP6v" name="Page-1">
-    <mxGraphModel dx="1422" dy="762" grid="1" gridSize="1" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1503" dy="706" grid="1" gridSize="1" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -38,7 +38,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="0OgzpcdSNnnKaS0ms3lA" name="Page-2">
-    <mxGraphModel dx="2170" dy="706" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2330" dy="706" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="CHY1JKjZ-cwcwIP-8aB2-0" />
         <mxCell id="CHY1JKjZ-cwcwIP-8aB2-1" parent="CHY1JKjZ-cwcwIP-8aB2-0" />
@@ -54,7 +54,7 @@
         <mxCell id="Idnr1RLPW2V9LJ6OMzab-48" value="- CorpsBase proxy_" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#000000;" vertex="1" parent="CHY1JKjZ-cwcwIP-8aB2-2">
           <mxGeometry y="78" width="279" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="CHY1JKjZ-cwcwIP-8aB2-12" value="PSyncObject&lt;Data&gt;&#xa;std::enable_shared_from_this&lt;&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;shadow=0;fontFamily=Helvetica;fontSize=12;align=center;" parent="CHY1JKjZ-cwcwIP-8aB2-1" vertex="1">
+        <mxCell id="CHY1JKjZ-cwcwIP-8aB2-12" value="PSyncObject&lt;Data&gt;&#xa;std::enable_shared_from_this&lt;&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;shadow=0;fontFamily=Helvetica;fontSize=12;align=center;" parent="CHY1JKjZ-cwcwIP-8aB2-1" vertex="1">
           <mxGeometry x="163" y="321" width="270" height="90" as="geometry" />
         </mxCell>
         <mxCell id="Idnr1RLPW2V9LJ6OMzab-32" value="+ ClientTaskList task_list_" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="CHY1JKjZ-cwcwIP-8aB2-12">
@@ -216,7 +216,7 @@
         <mxCell id="-l2edYAywjvh5u6Mlrhu-16" value="+ WeakReference&lt;BaseType&gt; ref_" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#000000;" vertex="1" parent="-l2edYAywjvh5u6Mlrhu-15">
           <mxGeometry y="26" width="210" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="-l2edYAywjvh5u6Mlrhu-17" value="SearchManager" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;shadow=0;fontFamily=Helvetica;fontSize=12;align=center;" vertex="1" parent="4NuZsKPPa98qgH2k7ZOk-1">
+        <mxCell id="-l2edYAywjvh5u6Mlrhu-17" value="SearchCacheManager" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;shadow=0;fontFamily=Helvetica;fontSize=12;align=center;" vertex="1" parent="4NuZsKPPa98qgH2k7ZOk-1">
           <mxGeometry x="-490" y="240" width="389" height="112" as="geometry" />
         </mxCell>
         <mxCell id="-l2edYAywjvh5u6Mlrhu-18" value="+ std::map&lt;SearchKey, SearchResult*&gt; results_" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="-l2edYAywjvh5u6Mlrhu-17">
