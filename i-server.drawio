@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-12-25T08:01:50.365Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36" etag="HZWw2OHDBR00qtALFZ8D" version="14.0.4" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2020-12-25T08:14:56.925Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36" etag="FCXiQELL9MSerMp2EGN8" version="14.0.4" type="github" pages="2">
   <diagram id="byrdOjGoN0qqc-SSHTPy" name="第 1 页">
     <mxGraphModel dx="1422" dy="761" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -170,10 +170,58 @@
     </mxGraphModel>
   </diagram>
   <diagram id="mpxylpOfhlkT-qfC_Q11" name="第 2 页">
-    <mxGraphModel dx="1422" dy="761" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="813" dy="1604" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="kf9HfHnqgQ3RGLmYnNmJ-0" />
         <mxCell id="kf9HfHnqgQ3RGLmYnNmJ-1" parent="kf9HfHnqgQ3RGLmYnNmJ-0" />
+        <mxCell id="1XTEM4jo2kJRmENLwVrO-0" value="WarningObjManager&#xa;T Object, size_t HeartbeatTick, T HeartbeatPolicy, T Insertor = CommonInsertor, size_t IndexMin = 0, size_t IndexMax, size_t IncPoolSize = 0" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;shadow=0;fontFamily=Helvetica;fontSize=12;align=center;sketch=1;strokeColor=#909090;fontColor=#1A1A1A;" vertex="1" parent="kf9HfHnqgQ3RGLmYnNmJ-1">
+          <mxGeometry x="160" y="70" width="780" height="116" as="geometry" />
+        </mxCell>
+        <mxCell id="1XTEM4jo2kJRmENLwVrO-1" value="# PB::SERVICE_TYPE service_type_" style="text;strokeColor=#56517e;fillColor=#d0cee2;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;sketch=1;" vertex="1" parent="1XTEM4jo2kJRmENLwVrO-0">
+          <mxGeometry y="30" width="780" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="1XTEM4jo2kJRmENLwVrO-2" value="# bool sync_to_gs_" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#1A1A1A;sketch=1;" vertex="1" parent="1XTEM4jo2kJRmENLwVrO-0">
+          <mxGeometry y="56" width="780" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="1XTEM4jo2kJRmENLwVrO-3" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="1XTEM4jo2kJRmENLwVrO-0">
+          <mxGeometry y="82" width="780" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="1XTEM4jo2kJRmENLwVrO-4" value="+ virtual bool ExportToClientData(PB::notify_client&amp; proto) const" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="1XTEM4jo2kJRmENLwVrO-0">
+          <mxGeometry y="90" width="780" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="1XTEM4jo2kJRmENLwVrO-5" value="ObjManager&#xa;T Object, size_t HeartbeatTick, T HeartbeatPolicy, T Insertor = CommonInsertor, size_t IndexMin = 0, size_t IndexMax, size_t IncPoolSize = 0" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;shadow=0;fontFamily=Helvetica;fontSize=12;align=center;sketch=1;strokeColor=#909090;fontColor=#1A1A1A;" vertex="1" parent="kf9HfHnqgQ3RGLmYnNmJ-1">
+          <mxGeometry x="150" y="-110" width="780" height="116" as="geometry" />
+        </mxCell>
+        <mxCell id="1XTEM4jo2kJRmENLwVrO-6" value="# PB::SERVICE_TYPE service_type_" style="text;strokeColor=#56517e;fillColor=#d0cee2;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;sketch=1;" vertex="1" parent="1XTEM4jo2kJRmENLwVrO-5">
+          <mxGeometry y="30" width="780" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="1XTEM4jo2kJRmENLwVrO-7" value="# bool sync_to_gs_" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#1A1A1A;sketch=1;" vertex="1" parent="1XTEM4jo2kJRmENLwVrO-5">
+          <mxGeometry y="56" width="780" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="1XTEM4jo2kJRmENLwVrO-8" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="1XTEM4jo2kJRmENLwVrO-5">
+          <mxGeometry y="82" width="780" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="1XTEM4jo2kJRmENLwVrO-9" value="+ virtual bool ExportToClientData(PB::notify_client&amp; proto) const" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="1XTEM4jo2kJRmENLwVrO-5">
+          <mxGeometry y="90" width="780" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="1XTEM4jo2kJRmENLwVrO-10" value="ObjManagerBasic&#xa;T Object, size_t IndexMin = 0, size_t IndexMax, size_t IncPoolSize = 0" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;shadow=0;fontFamily=Helvetica;fontSize=12;align=center;sketch=1;strokeColor=#909090;fontColor=#1A1A1A;" vertex="1" parent="kf9HfHnqgQ3RGLmYnNmJ-1">
+          <mxGeometry x="150" y="-290" width="780" height="142" as="geometry" />
+        </mxCell>
+        <mxCell id="1XTEM4jo2kJRmENLwVrO-11" value="+ Object* pool_" style="text;strokeColor=#56517e;fillColor=#d0cee2;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;sketch=1;" vertex="1" parent="1XTEM4jo2kJRmENLwVrO-10">
+          <mxGeometry y="30" width="780" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="1XTEM4jo2kJRmENLwVrO-12" value="+ size_t pool_size_" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#1A1A1A;sketch=1;" vertex="1" parent="1XTEM4jo2kJRmENLwVrO-10">
+          <mxGeometry y="56" width="780" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="1XTEM4jo2kJRmENLwVrO-15" value="+ ObjectPool* next_" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#1A1A1A;sketch=1;" vertex="1" parent="1XTEM4jo2kJRmENLwVrO-10">
+          <mxGeometry y="82" width="780" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="1XTEM4jo2kJRmENLwVrO-13" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="1XTEM4jo2kJRmENLwVrO-10">
+          <mxGeometry y="108" width="780" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="1XTEM4jo2kJRmENLwVrO-14" value="+ virtual bool ExportToClientData(PB::notify_client&amp; proto) const" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="1XTEM4jo2kJRmENLwVrO-10">
+          <mxGeometry y="116" width="780" height="26" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
