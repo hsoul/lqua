@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-12-28T11:26:26.413Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36" etag="9FrNcGwLkv7QFwM_-xyM" version="14.1.2" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2020-12-28T11:35:51.749Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36" etag="ybq-e6US4h2soh5Ej5UW" version="14.1.2" type="github" pages="2">
   <diagram id="byrdOjGoN0qqc-SSHTPy" name="第 1 页">
     <mxGraphModel dx="1662" dy="761" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -275,6 +275,90 @@
             <mxPoint x="950" y="-323" as="sourcePoint" />
             <mxPoint x="1070" y="-323" as="targetPoint" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="g4m-lO8wFWbg4mFHs3AX-28" value="GObject" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;shadow=0;fontFamily=Helvetica;fontSize=12;align=center;sketch=1;strokeColor=#909090;fontColor=#1A1A1A;" vertex="1" parent="kf9HfHnqgQ3RGLmYnNmJ-1">
+          <mxGeometry x="1460" y="-570" width="280" height="168" as="geometry" />
+        </mxCell>
+        <mxCell id="g4m-lO8wFWbg4mFHs3AX-29" value="+ Object* pool_ // 顺序内存" style="text;strokeColor=#56517e;fillColor=#d0cee2;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;sketch=1;" vertex="1" parent="g4m-lO8wFWbg4mFHs3AX-28">
+          <mxGeometry y="30" width="280" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="g4m-lO8wFWbg4mFHs3AX-30" value="+ size_t pool_size_  // pool 容量" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#1A1A1A;sketch=1;" vertex="1" parent="g4m-lO8wFWbg4mFHs3AX-28">
+          <mxGeometry y="56" width="280" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="g4m-lO8wFWbg4mFHs3AX-31" value="+ ObjectPool* next_" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#1A1A1A;sketch=1;" vertex="1" parent="g4m-lO8wFWbg4mFHs3AX-28">
+          <mxGeometry y="82" width="280" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="g4m-lO8wFWbg4mFHs3AX-32" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="g4m-lO8wFWbg4mFHs3AX-28">
+          <mxGeometry y="108" width="280" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="g4m-lO8wFWbg4mFHs3AX-33" value="+ size_t GetIndex(size_t offset, Object* obj) const" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="g4m-lO8wFWbg4mFHs3AX-28">
+          <mxGeometry y="116" width="280" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="g4m-lO8wFWbg4mFHs3AX-34" value="+ Object* GetObject(size_t index) const" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="g4m-lO8wFWbg4mFHs3AX-28">
+          <mxGeometry y="142" width="280" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="g4m-lO8wFWbg4mFHs3AX-35" value="GCreature" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;shadow=0;fontFamily=Helvetica;fontSize=12;align=center;sketch=1;strokeColor=#909090;fontColor=#1A1A1A;" vertex="1" parent="kf9HfHnqgQ3RGLmYnNmJ-1">
+          <mxGeometry x="1460" y="-360" width="280" height="168" as="geometry" />
+        </mxCell>
+        <mxCell id="g4m-lO8wFWbg4mFHs3AX-36" value="+ Object* pool_ // 顺序内存" style="text;strokeColor=#56517e;fillColor=#d0cee2;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;sketch=1;" vertex="1" parent="g4m-lO8wFWbg4mFHs3AX-35">
+          <mxGeometry y="30" width="280" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="g4m-lO8wFWbg4mFHs3AX-37" value="+ size_t pool_size_  // pool 容量" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#1A1A1A;sketch=1;" vertex="1" parent="g4m-lO8wFWbg4mFHs3AX-35">
+          <mxGeometry y="56" width="280" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="g4m-lO8wFWbg4mFHs3AX-38" value="+ ObjectPool* next_" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#1A1A1A;sketch=1;" vertex="1" parent="g4m-lO8wFWbg4mFHs3AX-35">
+          <mxGeometry y="82" width="280" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="g4m-lO8wFWbg4mFHs3AX-39" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="g4m-lO8wFWbg4mFHs3AX-35">
+          <mxGeometry y="108" width="280" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="g4m-lO8wFWbg4mFHs3AX-40" value="+ size_t GetIndex(size_t offset, Object* obj) const" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="g4m-lO8wFWbg4mFHs3AX-35">
+          <mxGeometry y="116" width="280" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="g4m-lO8wFWbg4mFHs3AX-41" value="+ Object* GetObject(size_t index) const" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="g4m-lO8wFWbg4mFHs3AX-35">
+          <mxGeometry y="142" width="280" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="g4m-lO8wFWbg4mFHs3AX-42" value="GPlayer" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;shadow=0;fontFamily=Helvetica;fontSize=12;align=center;sketch=1;strokeColor=#909090;fontColor=#1A1A1A;" vertex="1" parent="kf9HfHnqgQ3RGLmYnNmJ-1">
+          <mxGeometry x="1320" y="-150" width="280" height="168" as="geometry" />
+        </mxCell>
+        <mxCell id="g4m-lO8wFWbg4mFHs3AX-43" value="+ Object* pool_ // 顺序内存" style="text;strokeColor=#56517e;fillColor=#d0cee2;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;sketch=1;" vertex="1" parent="g4m-lO8wFWbg4mFHs3AX-42">
+          <mxGeometry y="30" width="280" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="g4m-lO8wFWbg4mFHs3AX-44" value="+ size_t pool_size_  // pool 容量" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#1A1A1A;sketch=1;" vertex="1" parent="g4m-lO8wFWbg4mFHs3AX-42">
+          <mxGeometry y="56" width="280" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="g4m-lO8wFWbg4mFHs3AX-45" value="+ ObjectPool* next_" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#1A1A1A;sketch=1;" vertex="1" parent="g4m-lO8wFWbg4mFHs3AX-42">
+          <mxGeometry y="82" width="280" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="g4m-lO8wFWbg4mFHs3AX-46" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="g4m-lO8wFWbg4mFHs3AX-42">
+          <mxGeometry y="108" width="280" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="g4m-lO8wFWbg4mFHs3AX-47" value="+ size_t GetIndex(size_t offset, Object* obj) const" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="g4m-lO8wFWbg4mFHs3AX-42">
+          <mxGeometry y="116" width="280" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="g4m-lO8wFWbg4mFHs3AX-48" value="+ Object* GetObject(size_t index) const" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="g4m-lO8wFWbg4mFHs3AX-42">
+          <mxGeometry y="142" width="280" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="g4m-lO8wFWbg4mFHs3AX-49" value="GNpc" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;shadow=0;fontFamily=Helvetica;fontSize=12;align=center;sketch=1;strokeColor=#909090;fontColor=#1A1A1A;" vertex="1" parent="kf9HfHnqgQ3RGLmYnNmJ-1">
+          <mxGeometry x="1620" y="-150" width="280" height="168" as="geometry" />
+        </mxCell>
+        <mxCell id="g4m-lO8wFWbg4mFHs3AX-50" value="+ Object* pool_ // 顺序内存" style="text;strokeColor=#56517e;fillColor=#d0cee2;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;sketch=1;" vertex="1" parent="g4m-lO8wFWbg4mFHs3AX-49">
+          <mxGeometry y="30" width="280" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="g4m-lO8wFWbg4mFHs3AX-51" value="+ size_t pool_size_  // pool 容量" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#1A1A1A;sketch=1;" vertex="1" parent="g4m-lO8wFWbg4mFHs3AX-49">
+          <mxGeometry y="56" width="280" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="g4m-lO8wFWbg4mFHs3AX-52" value="+ ObjectPool* next_" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#1A1A1A;sketch=1;" vertex="1" parent="g4m-lO8wFWbg4mFHs3AX-49">
+          <mxGeometry y="82" width="280" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="g4m-lO8wFWbg4mFHs3AX-53" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="g4m-lO8wFWbg4mFHs3AX-49">
+          <mxGeometry y="108" width="280" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="g4m-lO8wFWbg4mFHs3AX-54" value="+ size_t GetIndex(size_t offset, Object* obj) const" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="g4m-lO8wFWbg4mFHs3AX-49">
+          <mxGeometry y="116" width="280" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="g4m-lO8wFWbg4mFHs3AX-55" value="+ Object* GetObject(size_t index) const" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="g4m-lO8wFWbg4mFHs3AX-49">
+          <mxGeometry y="142" width="280" height="26" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
