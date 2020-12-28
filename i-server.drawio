@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-12-28T11:13:20.517Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36" etag="VsxBfe6dZxMo9DtCc5_J" version="14.1.2" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2020-12-28T11:21:32.879Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36" etag="7rm55pAhchi5i_b0b_NR" version="14.1.2" type="github" pages="2">
   <diagram id="byrdOjGoN0qqc-SSHTPy" name="第 1 页">
     <mxGraphModel dx="1662" dy="761" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -205,22 +205,37 @@
           <mxGeometry y="90" width="780" height="26" as="geometry" />
         </mxCell>
         <mxCell id="1XTEM4jo2kJRmENLwVrO-10" value="ObjManagerBasic&#xa;T Object, size_t IndexMin = 0, size_t IndexMax, size_t IncPoolSize = 0" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;shadow=0;fontFamily=Helvetica;fontSize=12;align=center;sketch=1;strokeColor=#909090;fontColor=#1A1A1A;" parent="kf9HfHnqgQ3RGLmYnNmJ-1" vertex="1">
-          <mxGeometry x="160" y="-320" width="780" height="142" as="geometry" />
+          <mxGeometry x="160" y="-400" width="780" height="272" as="geometry" />
         </mxCell>
         <mxCell id="1XTEM4jo2kJRmENLwVrO-11" value="+ Object* pool_" style="text;strokeColor=#56517e;fillColor=#d0cee2;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;sketch=1;" parent="1XTEM4jo2kJRmENLwVrO-10" vertex="1">
           <mxGeometry y="30" width="780" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="1XTEM4jo2kJRmENLwVrO-12" value="+ size_t pool_size_" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#1A1A1A;sketch=1;" parent="1XTEM4jo2kJRmENLwVrO-10" vertex="1">
+        <mxCell id="1XTEM4jo2kJRmENLwVrO-12" value="- Thread::Mutex lock_" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#1A1A1A;sketch=1;" parent="1XTEM4jo2kJRmENLwVrO-10" vertex="1">
           <mxGeometry y="56" width="780" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="1XTEM4jo2kJRmENLwVrO-15" value="+ ObjectPool* next_" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#1A1A1A;sketch=1;" parent="1XTEM4jo2kJRmENLwVrO-10" vertex="1">
+        <mxCell id="1XTEM4jo2kJRmENLwVrO-15" value="- Object* header_" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#1A1A1A;sketch=1;" parent="1XTEM4jo2kJRmENLwVrO-10" vertex="1">
           <mxGeometry y="82" width="780" height="26" as="geometry" />
         </mxCell>
+        <mxCell id="g4m-lO8wFWbg4mFHs3AX-12" value="- Object* tail_" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#1A1A1A;sketch=1;" vertex="1" parent="1XTEM4jo2kJRmENLwVrO-10">
+          <mxGeometry y="108" width="780" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="g4m-lO8wFWbg4mFHs3AX-22" value="- size_t count_" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#1A1A1A;sketch=1;" vertex="1" parent="1XTEM4jo2kJRmENLwVrO-10">
+          <mxGeometry y="134" width="780" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="g4m-lO8wFWbg4mFHs3AX-21" value="- size_t pool_size_" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#1A1A1A;sketch=1;" vertex="1" parent="1XTEM4jo2kJRmENLwVrO-10">
+          <mxGeometry y="160" width="780" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="g4m-lO8wFWbg4mFHs3AX-23" value="- ObjectPool* pools_" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#1A1A1A;sketch=1;" vertex="1" parent="1XTEM4jo2kJRmENLwVrO-10">
+          <mxGeometry y="186" width="780" height="26" as="geometry" />
+        </mxCell>
         <mxCell id="1XTEM4jo2kJRmENLwVrO-13" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="1XTEM4jo2kJRmENLwVrO-10" vertex="1">
-          <mxGeometry y="108" width="780" height="8" as="geometry" />
+          <mxGeometry y="212" width="780" height="8" as="geometry" />
         </mxCell>
         <mxCell id="1XTEM4jo2kJRmENLwVrO-14" value="+ virtual bool ExportToClientData(PB::notify_client&amp; proto) const" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="1XTEM4jo2kJRmENLwVrO-10" vertex="1">
-          <mxGeometry y="116" width="780" height="26" as="geometry" />
+          <mxGeometry y="220" width="780" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="g4m-lO8wFWbg4mFHs3AX-11" value="- Thread::Mutex lock_" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#1A1A1A;sketch=1;" vertex="1" parent="1XTEM4jo2kJRmENLwVrO-10">
+          <mxGeometry y="246" width="780" height="26" as="geometry" />
         </mxCell>
         <mxCell id="g4m-lO8wFWbg4mFHs3AX-0" value="" style="endArrow=block;endSize=16;endFill=0;html=1;entryX=0.513;entryY=1.115;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="kf9HfHnqgQ3RGLmYnNmJ-1" source="1XTEM4jo2kJRmENLwVrO-0" target="1XTEM4jo2kJRmENLwVrO-9">
           <mxGeometry width="160" relative="1" as="geometry">
@@ -234,7 +249,7 @@
             <mxPoint x="549.6399999999999" y="-178" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="g4m-lO8wFWbg4mFHs3AX-4" value="ObjPool" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;shadow=0;fontFamily=Helvetica;fontSize=12;align=center;sketch=1;strokeColor=#909090;fontColor=#1A1A1A;" vertex="1" parent="kf9HfHnqgQ3RGLmYnNmJ-1">
+        <mxCell id="g4m-lO8wFWbg4mFHs3AX-4" value="ObjectPool" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;shadow=0;fontFamily=Helvetica;fontSize=12;align=center;sketch=1;strokeColor=#909090;fontColor=#1A1A1A;" vertex="1" parent="kf9HfHnqgQ3RGLmYnNmJ-1">
           <mxGeometry x="1080" y="-340" width="280" height="168" as="geometry" />
         </mxCell>
         <mxCell id="g4m-lO8wFWbg4mFHs3AX-5" value="+ Object* pool_" style="text;strokeColor=#56517e;fillColor=#d0cee2;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;sketch=1;" vertex="1" parent="g4m-lO8wFWbg4mFHs3AX-4">
