@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-12-31T09:36:49.064Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36" etag="7SxyQyU5a37vV7x38PyN" version="14.1.2" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2021-01-04T02:40:07.639Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36" etag="RhxVtb4du3ZemwrY9jgD" version="14.1.2" type="github" pages="4">
   <diagram id="byrdOjGoN0qqc-SSHTPy" name="第 1 页">
     <mxGraphModel dx="1662" dy="761" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -470,19 +470,19 @@
         <mxCell id="_GTNA7dvRO97UwEpHw_9-0" />
         <mxCell id="_GTNA7dvRO97UwEpHw_9-1" parent="_GTNA7dvRO97UwEpHw_9-0" />
         <mxCell id="K6xU3CzozSw8IjiqCDT_-0" value="GRobot" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;shadow=0;fontFamily=Helvetica;fontSize=12;align=center;sketch=1;strokeColor=#909090;fontColor=#1A1A1A;" vertex="1" parent="_GTNA7dvRO97UwEpHw_9-1">
-          <mxGeometry x="1310" y="-1140" width="450" height="116" as="geometry" />
+          <mxGeometry x="1310" y="-1140" width="220" height="116" as="geometry" />
         </mxCell>
         <mxCell id="K6xU3CzozSw8IjiqCDT_-1" value="- robot_policy_base* policy_" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;sketch=1;strokeWidth=1;dashed=1;dashPattern=1 1;" vertex="1" parent="K6xU3CzozSw8IjiqCDT_-0">
-          <mxGeometry y="30" width="450" height="26" as="geometry" />
+          <mxGeometry y="30" width="220" height="26" as="geometry" />
         </mxCell>
         <mxCell id="K6xU3CzozSw8IjiqCDT_-3" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="K6xU3CzozSw8IjiqCDT_-0">
-          <mxGeometry y="56" width="450" height="8" as="geometry" />
+          <mxGeometry y="56" width="220" height="8" as="geometry" />
         </mxCell>
         <mxCell id="K6xU3CzozSw8IjiqCDT_-4" value="+ void RunTick(int robot_index)" style="text;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#1A1A1A;sketch=1;" vertex="1" parent="K6xU3CzozSw8IjiqCDT_-0">
-          <mxGeometry y="64" width="450" height="26" as="geometry" />
+          <mxGeometry y="64" width="220" height="26" as="geometry" />
         </mxCell>
         <mxCell id="K6xU3CzozSw8IjiqCDT_-5" value="+ void Heartbeat(int robot_index)" style="text;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#1A1A1A;sketch=1;" vertex="1" parent="K6xU3CzozSw8IjiqCDT_-0">
-          <mxGeometry y="90" width="450" height="26" as="geometry" />
+          <mxGeometry y="90" width="220" height="26" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
