@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-04-14T04:30:13.862Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36" etag="ilzU71vs5OvWDh6GOdqJ" version="14.5.0" type="github" pages="7">
+<mxfile host="app.diagrams.net" modified="2021-04-14T05:43:45.105Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36" etag="eAZLKt6NbA7SggG0tdao" version="14.5.0" type="github" pages="7">
   <diagram id="byrdOjGoN0qqc-SSHTPy" name="IdipDataManager">
     <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -694,7 +694,7 @@
           <mxGeometry x="45" y="170" width="10" height="80" as="geometry" />
         </mxCell>
         <mxCell id="DXi1b9blcnQJpZmZH-Il-2" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;rounded=0;sketch=1;strokeColor=#909090;fillColor=#F5AB50;fontColor=#1A1A1A;" vertex="1" parent="fxHlSvtfJn5dXw0pYKkg-0">
-          <mxGeometry x="45" y="429" width="10" height="70" as="geometry" />
+          <mxGeometry x="45" y="429" width="10" height="101" as="geometry" />
         </mxCell>
         <mxCell id="fxHlSvtfJn5dXw0pYKkg-4" value="" style="shape=umlLifeline;participant=umlActor;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;verticalAlign=top;spacingTop=36;outlineConnect=0;rounded=0;sketch=1;strokeColor=#909090;fillColor=#F5AB50;fontColor=#1A1A1A;" vertex="1" parent="QLjNQpj4k5rmd-GKOWjq-1">
           <mxGeometry x="-10" y="40" width="20" height="570" as="geometry" />
@@ -737,6 +737,9 @@
         </mxCell>
         <mxCell id="fxHlSvtfJn5dXw0pYKkg-11" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;rounded=0;sketch=1;strokeColor=#909090;fillColor=#F5AB50;fontColor=#1A1A1A;" vertex="1" parent="fxHlSvtfJn5dXw0pYKkg-7">
           <mxGeometry x="45" y="240" width="10" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="fxHlSvtfJn5dXw0pYKkg-12" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;rounded=0;sketch=1;strokeColor=#909090;fillColor=#F5AB50;fontColor=#1A1A1A;direction=west;" vertex="1" parent="fxHlSvtfJn5dXw0pYKkg-7">
+          <mxGeometry x="45" y="510" width="10" height="70" as="geometry" />
         </mxCell>
         <mxCell id="fxHlSvtfJn5dXw0pYKkg-21" value="GPROTOC_HOMETOWN_ENTER" style="html=1;verticalAlign=bottom;startArrow=oval;endArrow=block;startSize=8;strokeColor=#182E3E;fontColor=#1A1A1A;exitX=1.2;exitY=0.077;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="QLjNQpj4k5rmd-GKOWjq-1" source="fxHlSvtfJn5dXw0pYKkg-5" target="fxHlSvtfJn5dXw0pYKkg-1">
           <mxGeometry x="-0.055" y="-8" relative="1" as="geometry">
@@ -781,18 +784,17 @@
             <mxPoint x="413.5" y="288" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="fxHlSvtfJn5dXw0pYKkg-35" value="序列化玩家数据&lt;br&gt;player_login_with_data()&lt;br&gt;enter_world_with_player_locked()" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;entryX=1;entryY=0;strokeColor=#182E3E;fontColor=#1A1A1A;" edge="1" parent="QLjNQpj4k5rmd-GKOWjq-1">
+        <mxCell id="fxHlSvtfJn5dXw0pYKkg-35" value="序列化玩家数据&lt;br&gt;player_login_with_data()&lt;br&gt;enter_world_with_player_locked()" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;strokeColor=#182E3E;fontColor=#1A1A1A;" edge="1" parent="QLjNQpj4k5rmd-GKOWjq-1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="910" y="530" as="sourcePoint" />
+            <mxPoint x="240" y="500" as="sourcePoint" />
             <Array as="points">
-              <mxPoint x="910" y="530" />
-              <mxPoint x="930" y="530" />
-              <mxPoint x="930" y="558" />
+              <mxPoint x="260" y="500" />
+              <mxPoint x="260" y="528" />
             </Array>
-            <mxPoint x="910" y="558" as="targetPoint" />
+            <mxPoint x="240" y="528" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="fxHlSvtfJn5dXw0pYKkg-15" value="创建副本" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;strokeColor=#182E3E;fontColor=#1A1A1A;exitX=1.45;exitY=0.695;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="QLjNQpj4k5rmd-GKOWjq-1">
+        <mxCell id="fxHlSvtfJn5dXw0pYKkg-15" value="创建副本, 存储在世界管理器中，world_scene_manager" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;strokeColor=#182E3E;fontColor=#1A1A1A;exitX=1.45;exitY=0.695;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="QLjNQpj4k5rmd-GKOWjq-1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="230" y="359.0000000000001" as="sourcePoint" />
             <Array as="points">
@@ -820,14 +822,17 @@
             <mxPoint x="460" y="441" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="DXi1b9blcnQJpZmZH-Il-4" value="ChangeWorld:Pro" style="html=1;verticalAlign=bottom;startArrow=oval;endArrow=block;startSize=8;strokeColor=#182E3E;fontColor=#1A1A1A;entryX=0.5;entryY=0.143;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="QLjNQpj4k5rmd-GKOWjq-1" target="DXi1b9blcnQJpZmZH-Il-2">
+        <mxCell id="DXi1b9blcnQJpZmZH-Il-4" value="ChangeWorld:Pro" style="html=1;verticalAlign=bottom;startArrow=oval;endArrow=block;startSize=8;strokeColor=#182E3E;fontColor=#1A1A1A;" edge="1" parent="QLjNQpj4k5rmd-GKOWjq-1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="441" y="479" as="sourcePoint" />
-            <mxPoint x="240" y="480" as="targetPoint" />
+            <mxPoint x="442" y="478" as="sourcePoint" />
+            <mxPoint x="240" y="478" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="fxHlSvtfJn5dXw0pYKkg-12" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;rounded=0;sketch=1;strokeColor=#909090;fillColor=#F5AB50;fontColor=#1A1A1A;direction=west;" vertex="1" parent="QLjNQpj4k5rmd-GKOWjq-1">
-          <mxGeometry x="827" y="350" width="10" height="70" as="geometry" />
+        <mxCell id="DXi1b9blcnQJpZmZH-Il-5" value="ChangeWorldRe:Pro" style="html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#182E3E;fontColor=#1A1A1A;exitX=1.5;exitY=0.891;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1.3;entryY=0.871;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="QLjNQpj4k5rmd-GKOWjq-1" source="DXi1b9blcnQJpZmZH-Il-2" target="fxHlSvtfJn5dXw0pYKkg-12">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="230" y="550" as="sourcePoint" />
+            <mxPoint x="449.5" y="550" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
