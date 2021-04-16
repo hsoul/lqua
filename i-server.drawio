@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-04-16T03:07:09.746Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36" etag="CIuYIsVSSOBHd-V4KWVb" version="14.5.0" type="github" pages="9">
+<mxfile host="app.diagrams.net" modified="2021-04-16T03:10:05.038Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36" etag="8H6P9fUFZmIVtqzmLeRn" version="14.5.0" type="github" pages="9">
   <diagram id="byrdOjGoN0qqc-SSHTPy" name="IdipDataManager">
     <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -1178,6 +1178,9 @@
         </mxCell>
         <mxCell id="AXtk_KINnKAUISNVm-HZ-65" value="中心服和单服部署结构相同，它上面部署跨服服务" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="AXtk_KINnKAUISNVm-HZ-1">
           <mxGeometry x="270" y="585" width="320" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="AXtk_KINnKAUISNVm-HZ-66" value="参考数据：龙族，200组单服，32个hub，16中心服" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="AXtk_KINnKAUISNVm-HZ-1">
+          <mxGeometry x="280" y="870" width="320" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
