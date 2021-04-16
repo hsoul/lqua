@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-04-16T02:55:55.914Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36" etag="Kd8Ejrl-5SdYnyjE7HQB" version="14.5.0" type="github" pages="9">
+<mxfile host="app.diagrams.net" modified="2021-04-16T03:05:39.105Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36" etag="ntgS6nTRsNfHlNShWDfp" version="14.5.0" type="github" pages="9">
   <diagram id="byrdOjGoN0qqc-SSHTPy" name="IdipDataManager">
     <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -1078,6 +1078,106 @@
             <mxPoint x="300" y="350" as="sourcePoint" />
             <mxPoint x="350" y="300" as="targetPoint" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="AXtk_KINnKAUISNVm-HZ-45" style="edgeStyle=none;rounded=0;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;strokeColor=#000000;" edge="1" parent="AXtk_KINnKAUISNVm-HZ-1" source="AXtk_KINnKAUISNVm-HZ-33" target="AXtk_KINnKAUISNVm-HZ-37">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="AXtk_KINnKAUISNVm-HZ-46" style="edgeStyle=none;rounded=0;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;strokeColor=#000000;" edge="1" parent="AXtk_KINnKAUISNVm-HZ-1" source="AXtk_KINnKAUISNVm-HZ-33" target="AXtk_KINnKAUISNVm-HZ-38">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="AXtk_KINnKAUISNVm-HZ-33" value="1服（zone）" style="html=1;rounded=1;glass=0;sketch=1;strokeColor=#000000;fillColor=none;" vertex="1" parent="AXtk_KINnKAUISNVm-HZ-1">
+          <mxGeometry x="170" y="610" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="AXtk_KINnKAUISNVm-HZ-48" style="edgeStyle=none;rounded=0;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;strokeColor=#000000;" edge="1" parent="AXtk_KINnKAUISNVm-HZ-1" source="AXtk_KINnKAUISNVm-HZ-34" target="AXtk_KINnKAUISNVm-HZ-37">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="AXtk_KINnKAUISNVm-HZ-49" style="edgeStyle=none;rounded=0;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;strokeColor=#000000;" edge="1" parent="AXtk_KINnKAUISNVm-HZ-1" source="AXtk_KINnKAUISNVm-HZ-34" target="AXtk_KINnKAUISNVm-HZ-38">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="AXtk_KINnKAUISNVm-HZ-50" style="edgeStyle=none;rounded=0;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;strokeColor=#000000;" edge="1" parent="AXtk_KINnKAUISNVm-HZ-1" source="AXtk_KINnKAUISNVm-HZ-34" target="AXtk_KINnKAUISNVm-HZ-39">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="AXtk_KINnKAUISNVm-HZ-34" value="2服（zone）" style="html=1;rounded=1;glass=0;sketch=1;strokeColor=#000000;fillColor=none;" vertex="1" parent="AXtk_KINnKAUISNVm-HZ-1">
+          <mxGeometry x="170" y="680" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="AXtk_KINnKAUISNVm-HZ-51" style="edgeStyle=none;rounded=0;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;strokeColor=#000000;" edge="1" parent="AXtk_KINnKAUISNVm-HZ-1" source="AXtk_KINnKAUISNVm-HZ-35" target="AXtk_KINnKAUISNVm-HZ-37">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="AXtk_KINnKAUISNVm-HZ-52" style="edgeStyle=none;rounded=0;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;strokeColor=#000000;" edge="1" parent="AXtk_KINnKAUISNVm-HZ-1" source="AXtk_KINnKAUISNVm-HZ-35" target="AXtk_KINnKAUISNVm-HZ-38">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="AXtk_KINnKAUISNVm-HZ-53" style="edgeStyle=none;rounded=0;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;strokeColor=#000000;" edge="1" parent="AXtk_KINnKAUISNVm-HZ-1" source="AXtk_KINnKAUISNVm-HZ-35" target="AXtk_KINnKAUISNVm-HZ-39">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="AXtk_KINnKAUISNVm-HZ-35" value="3服（zone）" style="html=1;rounded=1;glass=0;sketch=1;strokeColor=#000000;fillColor=none;" vertex="1" parent="AXtk_KINnKAUISNVm-HZ-1">
+          <mxGeometry x="170" y="750" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="AXtk_KINnKAUISNVm-HZ-54" style="edgeStyle=none;rounded=0;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;strokeColor=#000000;" edge="1" parent="AXtk_KINnKAUISNVm-HZ-1" source="AXtk_KINnKAUISNVm-HZ-36" target="AXtk_KINnKAUISNVm-HZ-37">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="AXtk_KINnKAUISNVm-HZ-55" style="edgeStyle=none;rounded=0;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;strokeColor=#000000;" edge="1" parent="AXtk_KINnKAUISNVm-HZ-1" source="AXtk_KINnKAUISNVm-HZ-36" target="AXtk_KINnKAUISNVm-HZ-38">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="AXtk_KINnKAUISNVm-HZ-56" style="edgeStyle=none;rounded=0;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;strokeColor=#000000;" edge="1" parent="AXtk_KINnKAUISNVm-HZ-1" source="AXtk_KINnKAUISNVm-HZ-36" target="AXtk_KINnKAUISNVm-HZ-39">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="AXtk_KINnKAUISNVm-HZ-36" value="4服（zone）" style="html=1;rounded=1;glass=0;sketch=1;strokeColor=#000000;fillColor=none;" vertex="1" parent="AXtk_KINnKAUISNVm-HZ-1">
+          <mxGeometry x="170" y="820" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="AXtk_KINnKAUISNVm-HZ-57" style="edgeStyle=none;rounded=0;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;strokeColor=#000000;" edge="1" parent="AXtk_KINnKAUISNVm-HZ-1" target="AXtk_KINnKAUISNVm-HZ-41">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="499" y="675" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AXtk_KINnKAUISNVm-HZ-61" style="edgeStyle=none;rounded=0;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=-0.003;entryY=0.604;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=none;endFill=0;strokeColor=#000000;" edge="1" parent="AXtk_KINnKAUISNVm-HZ-1" source="AXtk_KINnKAUISNVm-HZ-37" target="AXtk_KINnKAUISNVm-HZ-42">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="AXtk_KINnKAUISNVm-HZ-37" value="hub1" style="html=1;rounded=1;glass=0;sketch=1;strokeColor=#000000;fillColor=none;" vertex="1" parent="AXtk_KINnKAUISNVm-HZ-1">
+          <mxGeometry x="389" y="650" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="AXtk_KINnKAUISNVm-HZ-58" style="edgeStyle=none;rounded=0;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;endArrow=none;endFill=0;strokeColor=#000000;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="AXtk_KINnKAUISNVm-HZ-1" source="AXtk_KINnKAUISNVm-HZ-38" target="AXtk_KINnKAUISNVm-HZ-41">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="590" y="710" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AXtk_KINnKAUISNVm-HZ-62" style="edgeStyle=none;rounded=0;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;endArrow=none;endFill=0;strokeColor=#000000;" edge="1" parent="AXtk_KINnKAUISNVm-HZ-1" source="AXtk_KINnKAUISNVm-HZ-38">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="590" y="780" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AXtk_KINnKAUISNVm-HZ-38" value="hub1" style="html=1;rounded=1;glass=0;sketch=1;strokeColor=#000000;fillColor=none;" vertex="1" parent="AXtk_KINnKAUISNVm-HZ-1">
+          <mxGeometry x="389" y="720" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="AXtk_KINnKAUISNVm-HZ-47" style="edgeStyle=none;rounded=0;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;endArrow=none;endFill=0;strokeColor=#000000;" edge="1" parent="AXtk_KINnKAUISNVm-HZ-1" source="AXtk_KINnKAUISNVm-HZ-39">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="280" y="640" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AXtk_KINnKAUISNVm-HZ-59" style="edgeStyle=none;rounded=0;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;strokeColor=#000000;" edge="1" parent="AXtk_KINnKAUISNVm-HZ-1" source="AXtk_KINnKAUISNVm-HZ-39" target="AXtk_KINnKAUISNVm-HZ-41">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="AXtk_KINnKAUISNVm-HZ-63" style="edgeStyle=none;rounded=0;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;endArrow=none;endFill=0;strokeColor=#000000;" edge="1" parent="AXtk_KINnKAUISNVm-HZ-1" source="AXtk_KINnKAUISNVm-HZ-39">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="590" y="780" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AXtk_KINnKAUISNVm-HZ-39" value="hub1" style="html=1;rounded=1;glass=0;sketch=1;strokeColor=#000000;fillColor=none;" vertex="1" parent="AXtk_KINnKAUISNVm-HZ-1">
+          <mxGeometry x="389" y="790" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="AXtk_KINnKAUISNVm-HZ-41" value="中心服1" style="html=1;rounded=1;glass=0;sketch=1;strokeColor=#000000;fillColor=none;" vertex="1" parent="AXtk_KINnKAUISNVm-HZ-1">
+          <mxGeometry x="590" y="680" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="AXtk_KINnKAUISNVm-HZ-42" value="中心服2" style="html=1;rounded=1;glass=0;sketch=1;strokeColor=#000000;fillColor=none;" vertex="1" parent="AXtk_KINnKAUISNVm-HZ-1">
+          <mxGeometry x="590" y="750" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="AXtk_KINnKAUISNVm-HZ-60" style="edgeStyle=none;rounded=0;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;strokeColor=#000000;" edge="1" parent="AXtk_KINnKAUISNVm-HZ-1" source="AXtk_KINnKAUISNVm-HZ-37" target="AXtk_KINnKAUISNVm-HZ-37">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="AXtk_KINnKAUISNVm-HZ-64" value="单服" style="shape=umlFrame;whiteSpace=wrap;html=1;sketch=1;" vertex="1" parent="AXtk_KINnKAUISNVm-HZ-1">
+          <mxGeometry x="140" y="570" width="580" height="330" as="geometry" />
+        </mxCell>
+        <mxCell id="AXtk_KINnKAUISNVm-HZ-65" value="中心服和单服部署结构相同，它上面部署跨服服务" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="AXtk_KINnKAUISNVm-HZ-1">
+          <mxGeometry x="270" y="585" width="320" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
