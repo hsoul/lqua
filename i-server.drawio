@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-04-16T02:53:00.808Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36" etag="s6QCiJHnH2lwtl6LIXaE" version="14.5.0" type="github" pages="9">
+<mxfile host="app.diagrams.net" modified="2021-04-16T02:55:55.914Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36" etag="Kd8Ejrl-5SdYnyjE7HQB" version="14.5.0" type="github" pages="9">
   <diagram id="byrdOjGoN0qqc-SSHTPy" name="IdipDataManager">
     <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -1000,16 +1000,16 @@
       <root>
         <mxCell id="AXtk_KINnKAUISNVm-HZ-0" />
         <mxCell id="AXtk_KINnKAUISNVm-HZ-1" parent="AXtk_KINnKAUISNVm-HZ-0" />
-        <mxCell id="AXtk_KINnKAUISNVm-HZ-31" value="单服" style="shape=umlFrame;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="AXtk_KINnKAUISNVm-HZ-1">
+        <mxCell id="AXtk_KINnKAUISNVm-HZ-31" value="单服" style="shape=umlFrame;whiteSpace=wrap;html=1;sketch=1;" vertex="1" parent="AXtk_KINnKAUISNVm-HZ-1">
           <mxGeometry x="140" y="210" width="580" height="330" as="geometry" />
         </mxCell>
-        <mxCell id="AXtk_KINnKAUISNVm-HZ-24" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;strokeColor=#000000;" edge="1" parent="AXtk_KINnKAUISNVm-HZ-1" source="AXtk_KINnKAUISNVm-HZ-2" target="AXtk_KINnKAUISNVm-HZ-8">
+        <mxCell id="AXtk_KINnKAUISNVm-HZ-24" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;strokeColor=#d79b00;fillColor=#ffe6cc;" edge="1" parent="AXtk_KINnKAUISNVm-HZ-1" source="AXtk_KINnKAUISNVm-HZ-2" target="AXtk_KINnKAUISNVm-HZ-8">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="AXtk_KINnKAUISNVm-HZ-2" value="gs" style="whiteSpace=wrap;html=1;align=center;fillColor=#ffe6cc;strokeColor=#d79b00;sketch=1;rounded=1;" vertex="1" parent="AXtk_KINnKAUISNVm-HZ-1">
           <mxGeometry x="200" y="300" width="100" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="AXtk_KINnKAUISNVm-HZ-25" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;endArrow=none;endFill=0;strokeColor=#000000;" edge="1" parent="AXtk_KINnKAUISNVm-HZ-1" source="AXtk_KINnKAUISNVm-HZ-3">
+        <mxCell id="AXtk_KINnKAUISNVm-HZ-25" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;endArrow=none;endFill=0;strokeColor=#d79b00;fillColor=#ffe6cc;" edge="1" parent="AXtk_KINnKAUISNVm-HZ-1" source="AXtk_KINnKAUISNVm-HZ-3">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="430" y="380.2068965517242" as="targetPoint" />
           </mxGeometry>
@@ -1017,7 +1017,7 @@
         <mxCell id="AXtk_KINnKAUISNVm-HZ-3" value="gs" style="whiteSpace=wrap;html=1;align=center;fillColor=#ffe6cc;strokeColor=#d79b00;sketch=1;rounded=1;" vertex="1" parent="AXtk_KINnKAUISNVm-HZ-1">
           <mxGeometry x="200" y="360" width="100" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="AXtk_KINnKAUISNVm-HZ-26" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;strokeColor=#000000;" edge="1" parent="AXtk_KINnKAUISNVm-HZ-1" source="AXtk_KINnKAUISNVm-HZ-4">
+        <mxCell id="AXtk_KINnKAUISNVm-HZ-26" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;strokeColor=#d79b00;fillColor=#ffe6cc;" edge="1" parent="AXtk_KINnKAUISNVm-HZ-1" source="AXtk_KINnKAUISNVm-HZ-4">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="430" y="380.0000000000001" as="targetPoint" />
           </mxGeometry>
@@ -1028,13 +1028,13 @@
         <mxCell id="AXtk_KINnKAUISNVm-HZ-5" value="glink" style="whiteSpace=wrap;html=1;align=center;fillColor=#d5e8d4;strokeColor=#82b366;sketch=1;rounded=1;" vertex="1" parent="AXtk_KINnKAUISNVm-HZ-1">
           <mxGeometry x="314" y="460" width="100" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="AXtk_KINnKAUISNVm-HZ-22" style="orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;rounded=0;endArrow=none;endFill=0;" edge="1" parent="AXtk_KINnKAUISNVm-HZ-1" source="AXtk_KINnKAUISNVm-HZ-6" target="AXtk_KINnKAUISNVm-HZ-8">
+        <mxCell id="AXtk_KINnKAUISNVm-HZ-22" style="orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;rounded=0;endArrow=none;endFill=0;fillColor=#d5e8d4;strokeColor=#82b366;" edge="1" parent="AXtk_KINnKAUISNVm-HZ-1" source="AXtk_KINnKAUISNVm-HZ-6" target="AXtk_KINnKAUISNVm-HZ-8">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="AXtk_KINnKAUISNVm-HZ-6" value="glink" style="whiteSpace=wrap;html=1;align=center;fillColor=#d5e8d4;sketch=1;strokeColor=#82b366;rounded=1;" vertex="1" parent="AXtk_KINnKAUISNVm-HZ-1">
           <mxGeometry x="430" y="460" width="100" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="AXtk_KINnKAUISNVm-HZ-23" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;endArrow=none;endFill=0;strokeColor=#000000;" edge="1" parent="AXtk_KINnKAUISNVm-HZ-1" source="AXtk_KINnKAUISNVm-HZ-7" target="AXtk_KINnKAUISNVm-HZ-8">
+        <mxCell id="AXtk_KINnKAUISNVm-HZ-23" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;endArrow=none;endFill=0;strokeColor=#82b366;fillColor=#d5e8d4;" edge="1" parent="AXtk_KINnKAUISNVm-HZ-1" source="AXtk_KINnKAUISNVm-HZ-7" target="AXtk_KINnKAUISNVm-HZ-8">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="AXtk_KINnKAUISNVm-HZ-7" value="glink" style="whiteSpace=wrap;html=1;align=center;fillColor=#d5e8d4;sketch=1;strokeColor=#82b366;glass=0;rounded=1;" vertex="1" parent="AXtk_KINnKAUISNVm-HZ-1">
@@ -1043,7 +1043,7 @@
         <mxCell id="AXtk_KINnKAUISNVm-HZ-27" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.438;entryY=1.048;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=none;endFill=0;strokeColor=#000000;" edge="1" parent="AXtk_KINnKAUISNVm-HZ-1" source="AXtk_KINnKAUISNVm-HZ-8" target="AXtk_KINnKAUISNVm-HZ-11">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="AXtk_KINnKAUISNVm-HZ-28" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;endArrow=none;endFill=0;strokeColor=#000000;" edge="1" parent="AXtk_KINnKAUISNVm-HZ-1" source="AXtk_KINnKAUISNVm-HZ-8" target="AXtk_KINnKAUISNVm-HZ-9">
+        <mxCell id="AXtk_KINnKAUISNVm-HZ-28" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;endArrow=none;endFill=0;strokeColor=#9673a6;fillColor=#e1d5e7;" edge="1" parent="AXtk_KINnKAUISNVm-HZ-1" source="AXtk_KINnKAUISNVm-HZ-8" target="AXtk_KINnKAUISNVm-HZ-9">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="AXtk_KINnKAUISNVm-HZ-8" value="ds" style="whiteSpace=wrap;html=1;align=center;fillColor=#f8cecc;strokeColor=#b85450;sketch=1;rounded=1;" vertex="1" parent="AXtk_KINnKAUISNVm-HZ-1">
@@ -1052,19 +1052,19 @@
         <mxCell id="AXtk_KINnKAUISNVm-HZ-29" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;endArrow=none;endFill=0;strokeColor=#000000;" edge="1" parent="AXtk_KINnKAUISNVm-HZ-1" source="AXtk_KINnKAUISNVm-HZ-9" target="AXtk_KINnKAUISNVm-HZ-10">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="AXtk_KINnKAUISNVm-HZ-9" value="dbproxy" style="whiteSpace=wrap;html=1;align=center;fillColor=none;" vertex="1" parent="AXtk_KINnKAUISNVm-HZ-1">
+        <mxCell id="AXtk_KINnKAUISNVm-HZ-9" value="dbproxy" style="whiteSpace=wrap;html=1;align=center;fillColor=#e1d5e7;strokeColor=#9673a6;sketch=1;rounded=1;" vertex="1" parent="AXtk_KINnKAUISNVm-HZ-1">
           <mxGeometry x="430" y="290" width="100" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="AXtk_KINnKAUISNVm-HZ-10" value="mysql" style="whiteSpace=wrap;html=1;align=center;fillColor=none;" vertex="1" parent="AXtk_KINnKAUISNVm-HZ-1">
+        <mxCell id="AXtk_KINnKAUISNVm-HZ-10" value="mysql" style="whiteSpace=wrap;html=1;align=center;fillColor=#dae8fc;strokeColor=#6c8ebf;sketch=1;rounded=1;" vertex="1" parent="AXtk_KINnKAUISNVm-HZ-1">
           <mxGeometry x="430" y="220" width="100" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="AXtk_KINnKAUISNVm-HZ-11" value="auany" style="whiteSpace=wrap;html=1;align=center;fillColor=none;" vertex="1" parent="AXtk_KINnKAUISNVm-HZ-1">
+        <mxCell id="AXtk_KINnKAUISNVm-HZ-11" value="auany" style="whiteSpace=wrap;html=1;align=center;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;sketch=1;rounded=1;" vertex="1" parent="AXtk_KINnKAUISNVm-HZ-1">
           <mxGeometry x="580" y="290" width="100" height="40" as="geometry" />
         </mxCell>
         <mxCell id="AXtk_KINnKAUISNVm-HZ-14" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;fillColor=none;align=left;size=0.4;sketch=1;" vertex="1" parent="AXtk_KINnKAUISNVm-HZ-1">
           <mxGeometry x="180" y="320" width="20" height="120" as="geometry" />
         </mxCell>
-        <mxCell id="AXtk_KINnKAUISNVm-HZ-17" value="游戏服务&lt;br&gt;可横向扩展" style="shape=note;size=20;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="AXtk_KINnKAUISNVm-HZ-1">
+        <mxCell id="AXtk_KINnKAUISNVm-HZ-17" value="游戏服务&lt;br&gt;可横向扩展" style="shape=note;size=20;whiteSpace=wrap;html=1;sketch=1;" vertex="1" parent="AXtk_KINnKAUISNVm-HZ-1">
           <mxGeometry x="200" y="230" width="100" height="50" as="geometry" />
         </mxCell>
         <mxCell id="AXtk_KINnKAUISNVm-HZ-18" value="。。。" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="AXtk_KINnKAUISNVm-HZ-1">
@@ -1073,7 +1073,7 @@
         <mxCell id="AXtk_KINnKAUISNVm-HZ-19" value="。。。" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="AXtk_KINnKAUISNVm-HZ-1">
           <mxGeometry x="680" y="470" width="40" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="AXtk_KINnKAUISNVm-HZ-20" value="" style="endArrow=none;html=1;strokeColor=#000000;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="AXtk_KINnKAUISNVm-HZ-1" source="AXtk_KINnKAUISNVm-HZ-5" target="AXtk_KINnKAUISNVm-HZ-8">
+        <mxCell id="AXtk_KINnKAUISNVm-HZ-20" value="" style="endArrow=none;html=1;strokeColor=#82b366;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;fillColor=#d5e8d4;" edge="1" parent="AXtk_KINnKAUISNVm-HZ-1" source="AXtk_KINnKAUISNVm-HZ-5" target="AXtk_KINnKAUISNVm-HZ-8">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="300" y="350" as="sourcePoint" />
             <mxPoint x="350" y="300" as="targetPoint" />
