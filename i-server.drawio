@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-04-19T10:06:59.199Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36" etag="r5oCHT1QkLrKq8MLyXBG" version="14.5.0" type="github" pages="9">
+<mxfile host="app.diagrams.net" modified="2021-04-19T10:08:53.352Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36" etag="nyBDMZDnXWpMRjYGj2Dq" version="14.5.0" type="github" pages="9">
   <diagram id="byrdOjGoN0qqc-SSHTPy" name="IdipDataManager">
     <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -842,6 +842,9 @@
       <root>
         <mxCell id="_Dir23uogN8CgNYAF1NI-0" />
         <mxCell id="_Dir23uogN8CgNYAF1NI-1" parent="_Dir23uogN8CgNYAF1NI-0" />
+        <mxCell id="5Iy0sa9M9X6QYgl8NhAp-1" value="源区服" style="shape=umlFrame;whiteSpace=wrap;html=1;rounded=1;glass=0;sketch=0;strokeColor=#d79b00;fillColor=#ffe6cc;dashed=1;" parent="_Dir23uogN8CgNYAF1NI-1" vertex="1">
+          <mxGeometry x="140" width="420" height="630" as="geometry" />
+        </mxCell>
         <mxCell id="5Iy0sa9M9X6QYgl8NhAp-2" value="跨区服" style="shape=umlFrame;whiteSpace=wrap;html=1;rounded=1;glass=0;sketch=0;strokeColor=#82b366;fillColor=#d5e8d4;dashed=1;" parent="_Dir23uogN8CgNYAF1NI-1" vertex="1">
           <mxGeometry x="780" width="420" height="630" as="geometry" />
         </mxCell>
@@ -864,7 +867,7 @@
           <mxGeometry x="45" y="117" width="10" height="20" as="geometry" />
         </mxCell>
         <mxCell id="qY9Y4R0hy0r835PthuYR-10" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;rounded=0;sketch=1;strokeColor=#909090;fillColor=#F5AB50;fontColor=#1A1A1A;" parent="qY9Y4R0hy0r835PthuYR-8" vertex="1">
-          <mxGeometry x="45" y="137" width="10" height="53" as="geometry" />
+          <mxGeometry x="45" y="137" width="10" height="63" as="geometry" />
         </mxCell>
         <mxCell id="qY9Y4R0hy0r835PthuYR-11" value="打包ds角色玩家数据" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;entryX=1.117;entryY=0.396;strokeColor=#182E3E;fontColor=#1A1A1A;entryDx=0;entryDy=0;entryPerimeter=0;" parent="qY9Y4R0hy0r835PthuYR-8" edge="1">
           <mxGeometry relative="1" as="geometry">
@@ -974,7 +977,7 @@
             <mxPoint x="510" y="460" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="t0A_JmYiTawWzj3FZeXU-30" value="&lt;span style=&quot;color: rgb(26 , 26 , 26) ; font-size: 11px ; text-align: left ; background-color: rgb(255 , 255 , 255)&quot;&gt;PlayerChangeZone()&lt;/span&gt;" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;rounded=0;glass=0;dashed=1;sketch=0;strokeColor=#000000;" parent="_Dir23uogN8CgNYAF1NI-1" vertex="1">
+        <mxCell id="t0A_JmYiTawWzj3FZeXU-30" value="&lt;div style=&quot;text-align: left&quot;&gt;PlayerChangeZone()&lt;br&gt;&lt;/div&gt;" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=#e1d5e7;rounded=0;glass=0;dashed=1;sketch=0;strokeColor=#9673a6;" parent="_Dir23uogN8CgNYAF1NI-1" vertex="1">
           <mxGeometry x="90" y="100" width="130" height="20" as="geometry" />
         </mxCell>
         <mxCell id="2n2ulUP4-xGGqEuB1Qmz-0" value="" style="shape=umlLifeline;participant=umlActor;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;verticalAlign=top;spacingTop=36;outlineConnect=0;rounded=0;sketch=1;strokeColor=#b85450;fillColor=#f8cecc;" parent="_Dir23uogN8CgNYAF1NI-1" vertex="1">
@@ -1000,9 +1003,6 @@
         </mxCell>
         <mxCell id="2n2ulUP4-xGGqEuB1Qmz-5" value="&lt;div style=&quot;text-align: left&quot;&gt;&lt;div&gt;至此玩家数据已经同步&lt;/div&gt;&lt;div&gt;到中心服或者跨服区服&lt;/div&gt;&lt;div&gt;上去了，此时客户端可&lt;/div&gt;&lt;div&gt;断开当前连接，连接跨&lt;/div&gt;&lt;div&gt;服区服继续跨服服务&lt;/div&gt;&lt;/div&gt;" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=#e1d5e7;rounded=0;glass=0;dashed=1;sketch=0;strokeColor=#9673a6;" parent="_Dir23uogN8CgNYAF1NI-1" vertex="1">
           <mxGeometry x="-100" y="450" width="140" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="5Iy0sa9M9X6QYgl8NhAp-1" value="源区服" style="shape=umlFrame;whiteSpace=wrap;html=1;rounded=1;glass=0;sketch=0;strokeColor=#d79b00;fillColor=#ffe6cc;dashed=1;" parent="_Dir23uogN8CgNYAF1NI-1" vertex="1">
-          <mxGeometry x="150" width="420" height="630" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
