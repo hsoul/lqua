@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-04-19T09:58:02.924Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36" etag="kh9s-JigdPrPlg5C-Cw0" version="14.5.0" type="github" pages="9">
+<mxfile host="app.diagrams.net" modified="2021-04-19T10:02:33.772Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36" etag="wug66AO0DVXKyqEJap9K" version="14.5.0" type="github" pages="9">
   <diagram id="byrdOjGoN0qqc-SSHTPy" name="IdipDataManager">
     <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -561,7 +561,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="gG11JS08fyDljiQpBNpJ" name="world">
-    <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1421" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="MAL9It-0oTPftvyACqf2-0" />
         <mxCell id="MAL9It-0oTPftvyACqf2-1" parent="MAL9It-0oTPftvyACqf2-0" />
@@ -997,6 +997,12 @@
         </mxCell>
         <mxCell id="2n2ulUP4-xGGqEuB1Qmz-5" value="&lt;div style=&quot;text-align: left&quot;&gt;&lt;font color=&quot;#1a1a1a&quot;&gt;&lt;span style=&quot;font-size: 11px ; background-color: rgb(255 , 255 , 255)&quot;&gt;至此玩家数据已经同步&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;font color=&quot;#1a1a1a&quot;&gt;&lt;span style=&quot;font-size: 11px ; background-color: rgb(255 , 255 , 255)&quot;&gt;到中心服&lt;/span&gt;&lt;/font&gt;&lt;span style=&quot;background-color: rgb(255 , 255 , 255) ; font-size: 11px ; color: rgb(26 , 26 , 26)&quot;&gt;或&lt;/span&gt;&lt;font color=&quot;#1a1a1a&quot;&gt;&lt;span style=&quot;font-size: 11px ; background-color: rgb(255 , 255 , 255)&quot;&gt;者跨服区服&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;font color=&quot;#1a1a1a&quot;&gt;&lt;span style=&quot;font-size: 11px ; background-color: rgb(255 , 255 , 255)&quot;&gt;上去了，此时客户端&lt;/span&gt;&lt;/font&gt;&lt;span style=&quot;font-size: 11px ; background-color: rgb(255 , 255 , 255) ; color: rgb(26 , 26 , 26)&quot;&gt;可&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span style=&quot;background-color: rgb(255 , 255 , 255) ; font-size: 11px ; color: rgb(26 , 26 , 26)&quot;&gt;断&lt;/span&gt;&lt;span style=&quot;background-color: rgb(255 , 255 , 255) ; font-size: 11px ; color: rgb(26 , 26 , 26)&quot;&gt;开当前连接，连接跨&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span style=&quot;background-color: rgb(255 , 255 , 255) ; font-size: 11px ; color: rgb(26 , 26 , 26)&quot;&gt;服区服继续&lt;/span&gt;&lt;span style=&quot;background-color: rgb(255 , 255 , 255) ; font-size: 11px ; color: rgb(26 , 26 , 26)&quot;&gt;跨服服务&lt;/span&gt;&lt;/div&gt;" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;rounded=0;glass=0;dashed=1;sketch=0;strokeColor=#000000;" vertex="1" parent="_Dir23uogN8CgNYAF1NI-1">
           <mxGeometry x="-100" y="450" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="5Iy0sa9M9X6QYgl8NhAp-1" value="源区服" style="shape=umlFrame;whiteSpace=wrap;html=1;rounded=1;glass=0;sketch=0;strokeColor=#000000;fillColor=none;dashed=1;" vertex="1" parent="_Dir23uogN8CgNYAF1NI-1">
+          <mxGeometry x="150" width="420" height="630" as="geometry" />
+        </mxCell>
+        <mxCell id="5Iy0sa9M9X6QYgl8NhAp-2" value="跨区服" style="shape=umlFrame;whiteSpace=wrap;html=1;rounded=1;glass=0;sketch=0;strokeColor=#000000;fillColor=none;dashed=1;" vertex="1" parent="_Dir23uogN8CgNYAF1NI-1">
+          <mxGeometry x="780" width="420" height="630" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
