@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-04-19T10:37:01.553Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36" etag="m0svlcZDLHZ4JCavYQSy" version="14.5.0" type="github" pages="9">
+<mxfile host="app.diagrams.net" modified="2021-04-20T09:48:03.464Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36" etag="DJgD5wE-3uVzYFZz2lLq" version="14.5.0" type="github" pages="9">
   <diagram id="byrdOjGoN0qqc-SSHTPy" name="IdipDataManager">
     <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -907,8 +907,8 @@
             <mxPoint x="240.17000000000007" y="145.84000000000003" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="t0A_JmYiTawWzj3FZeXU-0" value="gprotocbuf_gs.cpp:ds 处理gs发过来的协议" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=#e1d5e7;rounded=0;glass=0;sketch=0;dashed=1;strokeColor=#9673a6;" parent="_Dir23uogN8CgNYAF1NI-1" vertex="1">
-          <mxGeometry x="460" y="130" width="240" height="20" as="geometry" />
+        <mxCell id="t0A_JmYiTawWzj3FZeXU-0" value="gprotocbuf_gs.cpp:ds 处理gs发来的协议" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=#e1d5e7;rounded=0;glass=0;sketch=0;dashed=1;strokeColor=#9673a6;" parent="_Dir23uogN8CgNYAF1NI-1" vertex="1">
+          <mxGeometry x="460" y="130" width="230" height="20" as="geometry" />
         </mxCell>
         <mxCell id="t0A_JmYiTawWzj3FZeXU-1" value="gdeliver" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=0;sketch=1;strokeColor=#82b366;fillColor=#d5e8d4;" parent="_Dir23uogN8CgNYAF1NI-1" vertex="1">
           <mxGeometry x="840" y="40" width="100" height="580" as="geometry" />
@@ -1003,6 +1003,9 @@
         </mxCell>
         <mxCell id="2n2ulUP4-xGGqEuB1Qmz-5" value="&lt;div style=&quot;text-align: left&quot;&gt;&lt;div&gt;至此玩家数据已经同步&lt;/div&gt;&lt;div&gt;到中心服或者跨服区服&lt;/div&gt;&lt;div&gt;上去了，此时客户端可&lt;/div&gt;&lt;div&gt;断开当前连接，连接跨&lt;/div&gt;&lt;div&gt;服区服继续跨服服务&lt;/div&gt;&lt;/div&gt;" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=#e1d5e7;rounded=0;glass=0;dashed=1;sketch=0;strokeColor=#9673a6;" parent="_Dir23uogN8CgNYAF1NI-1" vertex="1">
           <mxGeometry x="-100" y="450" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="H4jc6ycqT95DzFCvkHkk-0" value="gprotocbuf_hub.cpp:ds 处理hub发来的协议" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=#e1d5e7;rounded=0;glass=0;sketch=0;dashed=1;strokeColor=#9673a6;" vertex="1" parent="_Dir23uogN8CgNYAF1NI-1">
+          <mxGeometry x="900" y="240" width="240" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
