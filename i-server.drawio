@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-04-20T09:48:03.464Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36" etag="DJgD5wE-3uVzYFZz2lLq" version="14.5.0" type="github" pages="9">
+<mxfile host="app.diagrams.net" modified="2021-04-21T02:39:17.358Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36" etag="cJII4b3KKcPvCi2J55IW" version="14.5.0" type="github" pages="11">
   <diagram id="byrdOjGoN0qqc-SSHTPy" name="IdipDataManager">
     <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -1203,6 +1203,22 @@
         <mxCell id="AXtk_KINnKAUISNVm-HZ-67" value="hub" style="whiteSpace=wrap;html=1;align=center;fillColor=#ffff88;strokeColor=#36393d;sketch=1;rounded=1;" parent="AXtk_KINnKAUISNVm-HZ-1" vertex="1">
           <mxGeometry x="580" y="360" width="100" height="40" as="geometry" />
         </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="js4QM6ef-3OwjSa9COxO" name="用户登录流程">
+    <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="qzw4XGbBiQtXHjRk1RwU-0" />
+        <mxCell id="qzw4XGbBiQtXHjRk1RwU-1" parent="qzw4XGbBiQtXHjRk1RwU-0" />
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="znIT6PlLzC5HIRi-AD_K" name="角色登陆流程">
+    <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="K9kUdu191R3OUYjlQp83-0" />
+        <mxCell id="K9kUdu191R3OUYjlQp83-1" parent="K9kUdu191R3OUYjlQp83-0" />
       </root>
     </mxGraphModel>
   </diagram>
