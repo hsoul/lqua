@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-04-22T06:45:31.664Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36" etag="BbipTc5MJdfA2tNFi-nQ" version="14.5.0" type="github" pages="11">
+<mxfile host="app.diagrams.net" modified="2021-04-22T06:47:14.692Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36" etag="LPQEgYIS1feGBp4c3SDx" version="14.5.0" type="github" pages="11">
   <diagram id="byrdOjGoN0qqc-SSHTPy" name="IdipDataManager">
     <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -1413,6 +1413,9 @@
         </mxCell>
         <mxCell id="5rlW5Fh4A7XZ7E-sB3Ge-94" value="继续游戏服务" style="rounded=0;whiteSpace=wrap;html=1;sketch=0;fontSize=14;fontStyle=1;" vertex="1" parent="qzw4XGbBiQtXHjRk1RwU-1">
           <mxGeometry x="830" y="1070" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="5rlW5Fh4A7XZ7E-sB3Ge-112" value="成功" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fontSize=12;" vertex="1" parent="qzw4XGbBiQtXHjRk1RwU-1">
+          <mxGeometry x="890" y="370" width="40" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
