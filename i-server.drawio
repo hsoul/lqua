@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-04-22T06:14:08.312Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36" etag="7WH4EL-OIMoTstwdVxWB" version="14.5.0" type="github" pages="11">
+<mxfile host="app.diagrams.net" modified="2021-04-22T06:22:01.276Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36" etag="2izFJwub0EAJL0NhrC0p" version="14.5.0" type="github" pages="11">
   <diagram id="byrdOjGoN0qqc-SSHTPy" name="IdipDataManager">
     <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -1284,9 +1284,6 @@
         </mxCell>
         <mxCell id="5rlW5Fh4A7XZ7E-sB3Ge-11" value="登陆成功" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;strokeColor=#b85450;fontSize=14;fontStyle=1;fillColor=#f8cecc;" vertex="1" parent="qzw4XGbBiQtXHjRk1RwU-1">
           <mxGeometry x="300" y="1020" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="5rlW5Fh4A7XZ7E-sB3Ge-15" value="&lt;font style=&quot;font-size: 12px&quot;&gt;通过&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fontSize=14;" vertex="1" parent="qzw4XGbBiQtXHjRk1RwU-1">
-          <mxGeometry x="340" y="230" width="40" height="20" as="geometry" />
         </mxCell>
         <mxCell id="5rlW5Fh4A7XZ7E-sB3Ge-19" value="是" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fontSize=14;" vertex="1" parent="qzw4XGbBiQtXHjRk1RwU-1">
           <mxGeometry x="285" y="560" width="30" height="20" as="geometry" />
