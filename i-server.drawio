@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-04-23T10:17:19.531Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36" etag="bKQdYwPaOl_LirvEvdsV" version="14.6.6" type="github" pages="11">
+<mxfile host="app.diagrams.net" modified="2021-04-23T10:19:07.347Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36" etag="vBjkT6mKxjjM8X-4Lm7Y" version="14.6.6" type="github" pages="11">
   <diagram id="byrdOjGoN0qqc-SSHTPy" name="IdipDataManager">
     <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -1428,6 +1428,18 @@
         </mxCell>
         <mxCell id="IO3q2ssleFcNQMTGx1nD-0" value="此处应该设置玩家跨服&lt;br&gt;状态，应该有超时机制&lt;br&gt;避免客户端未发起跨服&lt;br&gt;后续流程，同理在目标&lt;br&gt;服也应有相应的超时机&lt;br&gt;制" style="text;html=1;resizable=0;autosize=1;align=left;verticalAlign=middle;points=[];fillColor=#e1d5e7;rounded=0;glass=0;sketch=0;dashed=1;strokeColor=#9673a6;" parent="qzw4XGbBiQtXHjRk1RwU-1" vertex="1">
           <mxGeometry x="645" y="385" width="140" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="r2vvoH1E4E2ofHY7Xm33-0" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="qzw4XGbBiQtXHjRk1RwU-1">
+          <mxGeometry x="250" y="340" width="20" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="r2vvoH1E4E2ofHY7Xm33-1" value="ds 数据" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#9673a6;dashed=1;fillColor=#e1d5e7;" vertex="1" parent="qzw4XGbBiQtXHjRk1RwU-1">
+          <mxGeometry x="180" y="390" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="r2vvoH1E4E2ofHY7Xm33-2" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;dashed=1;strokeColor=#000000;size=0.5;" vertex="1" parent="qzw4XGbBiQtXHjRk1RwU-1">
+          <mxGeometry x="260" y="730" width="20" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="r2vvoH1E4E2ofHY7Xm33-3" value="gs 数据" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#9673a6;dashed=1;fillColor=#e1d5e7;" vertex="1" parent="qzw4XGbBiQtXHjRk1RwU-1">
+          <mxGeometry x="180" y="760" width="60" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
