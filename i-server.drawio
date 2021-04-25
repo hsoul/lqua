@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-04-25T09:42:18.572Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36" etag="pz4NmYgIXOeSjGlcv8ru" version="14.6.6" type="github" pages="13">
+<mxfile host="app.diagrams.net" modified="2021-04-25T10:28:23.764Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36" etag="_3bgu5e89HNq9IG_mkgu" version="14.6.6" type="github" pages="13">
   <diagram id="byrdOjGoN0qqc-SSHTPy" name="IdipDataManager">
     <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -1515,7 +1515,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="m8S2jYCymDaGC3un9a_z" name="数据存储过程">
-    <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1815" dy="828" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="feaCANqeKtMZinjP7p-t-0" />
         <mxCell id="feaCANqeKtMZinjP7p-t-1" parent="feaCANqeKtMZinjP7p-t-0" />
@@ -1723,7 +1723,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="Eu6S1HQARSIcqGpE04-F" name="家园跨服流程">
-    <mxGraphModel dx="2249" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2642" dy="828" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="QwG8HII2U616yksSc097-0" />
         <mxCell id="QwG8HII2U616yksSc097-1" parent="QwG8HII2U616yksSc097-0" />
@@ -1764,19 +1764,19 @@
         </mxCell>
         <mxCell id="w-wZ8tn7DGYByPFwAL4y-11" value="&amp;nbsp;TransferProcess() case ipt_game_roam&lt;br&gt;解析用户、角色数据，ds创建用户角色&lt;br&gt;缓存gs角色数据&lt;br&gt;缓存跨服服务信息&lt;br&gt;设置user等待跨服状态" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;strokeColor=#182E3E;fontColor=#1A1A1A;entryX=1.45;entryY=0.66;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="QwG8HII2U616yksSc097-1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="890" y="210" as="sourcePoint" />
+            <mxPoint x="890" y="220" as="sourcePoint" />
             <Array as="points">
-              <mxPoint x="915" y="210" />
-              <mxPoint x="915" y="243" />
+              <mxPoint x="915" y="220" />
+              <mxPoint x="915" y="253" />
             </Array>
-            <mxPoint x="894.5" y="242.79999999999995" as="targetPoint" />
+            <mxPoint x="894.5" y="252.79999999999995" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="w-wZ8tn7DGYByPFwAL4y-14" value="gdeliver" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=0;sketch=0;strokeColor=#82b366;fillColor=#d5e8d4;" vertex="1" parent="QwG8HII2U616yksSc097-1">
           <mxGeometry x="840" y="40" width="100" height="1240" as="geometry" />
         </mxCell>
         <mxCell id="w-wZ8tn7DGYByPFwAL4y-15" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;rounded=0;sketch=1;strokeColor=#82b366;fillColor=#d5e8d4;" vertex="1" parent="w-wZ8tn7DGYByPFwAL4y-14">
-          <mxGeometry x="45" y="140" width="10" height="100" as="geometry" />
+          <mxGeometry x="45" y="170" width="10" height="80" as="geometry" />
         </mxCell>
         <mxCell id="w-wZ8tn7DGYByPFwAL4y-16" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;rounded=0;sketch=1;strokeColor=#82b366;fillColor=#d5e8d4;" vertex="1" parent="w-wZ8tn7DGYByPFwAL4y-14">
           <mxGeometry x="45" y="360" width="10" height="50" as="geometry" />
