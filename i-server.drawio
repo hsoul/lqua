@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-04-25T03:17:35.370Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36" etag="It3CbxBMzEnsL5pz06mW" version="14.6.6" type="github" pages="12">
+<mxfile host="app.diagrams.net" modified="2021-04-25T03:34:57.081Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36" etag="WNZbGvlHE-i39TsGtT8Z" version="14.6.6" type="github" pages="12">
   <diagram id="byrdOjGoN0qqc-SSHTPy" name="IdipDataManager">
     <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -1496,6 +1496,20 @@
         </mxCell>
         <mxCell id="E34J_g4t0m7eEUNpH7jd-0" value="ds用户状态机" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=#e1d5e7;rounded=0;glass=0;sketch=0;dashed=1;strokeColor=#9673a6;" parent="K9kUdu191R3OUYjlQp83-1" vertex="1">
           <mxGeometry x="110" y="60" width="90" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="zqcH8ABBpS4jDkB61w9A-2" style="edgeStyle=none;rounded=0;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;startArrow=none;startFill=0;endArrow=classic;endFill=1;" edge="1" parent="K9kUdu191R3OUYjlQp83-1" source="zqcH8ABBpS4jDkB61w9A-0" target="zqcH8ABBpS4jDkB61w9A-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zqcH8ABBpS4jDkB61w9A-3" value="收到GameRoam协议，创建好了跨服用户和角色（ds）" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;" vertex="1" connectable="0" parent="zqcH8ABBpS4jDkB61w9A-2">
+          <mxGeometry x="-0.1917" y="2" relative="1" as="geometry">
+            <mxPoint x="-17" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zqcH8ABBpS4jDkB61w9A-0" value="INITIAL" style="ellipse;whiteSpace=wrap;html=1;sketch=0;fontSize=12;strokeColor=#000000;" vertex="1" parent="K9kUdu191R3OUYjlQp83-1">
+          <mxGeometry x="860" y="60" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="zqcH8ABBpS4jDkB61w9A-1" value="ROAM_RECV" style="ellipse;whiteSpace=wrap;html=1;sketch=0;fontSize=12;strokeColor=#000000;" vertex="1" parent="K9kUdu191R3OUYjlQp83-1">
+          <mxGeometry x="740" y="210" width="120" height="80" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
