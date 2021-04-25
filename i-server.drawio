@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-04-25T10:28:23.764Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36" etag="_3bgu5e89HNq9IG_mkgu" version="14.6.6" type="github" pages="13">
+<mxfile host="app.diagrams.net" modified="2021-04-25T11:46:18.932Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36" etag="F9_s-xUxoc7RmpZidx8S" version="14.6.6" type="github" pages="13">
   <diagram id="byrdOjGoN0qqc-SSHTPy" name="IdipDataManager">
     <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -671,7 +671,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="JzuE075Evpkx4QbJ4KAf" name="进入副本流程">
-    <mxGraphModel dx="2249" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2642" dy="828" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="QLjNQpj4k5rmd-GKOWjq-0" />
         <mxCell id="QLjNQpj4k5rmd-GKOWjq-1" parent="QLjNQpj4k5rmd-GKOWjq-0" />
@@ -838,7 +838,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="3yaVNIZwTTeXhppjEYmL" name="跨服流程">
-    <mxGraphModel dx="2249" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2642" dy="828" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="_Dir23uogN8CgNYAF1NI-0" />
         <mxCell id="_Dir23uogN8CgNYAF1NI-1" parent="_Dir23uogN8CgNYAF1NI-0" />
@@ -1011,7 +1011,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="nFroAYp-pxMSHFFE5E-w" name="服务器整体架构">
-    <mxGraphModel dx="813" dy="435" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1037" dy="473" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="AXtk_KINnKAUISNVm-HZ-0" />
         <mxCell id="AXtk_KINnKAUISNVm-HZ-1" parent="AXtk_KINnKAUISNVm-HZ-0" />
@@ -1216,7 +1216,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="js4QM6ef-3OwjSa9COxO" name="登陆逻辑图">
-    <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1815" dy="828" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="qzw4XGbBiQtXHjRk1RwU-0" />
         <mxCell id="qzw4XGbBiQtXHjRk1RwU-1" parent="qzw4XGbBiQtXHjRk1RwU-0" />
@@ -1445,7 +1445,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="znIT6PlLzC5HIRi-AD_K" name="玩家登陆状态机">
-    <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1815" dy="828" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="K9kUdu191R3OUYjlQp83-0" />
         <mxCell id="K9kUdu191R3OUYjlQp83-1" parent="K9kUdu191R3OUYjlQp83-0" />
@@ -1831,9 +1831,6 @@
         </mxCell>
         <mxCell id="w-wZ8tn7DGYByPFwAL4y-27" value="通过 RoamTransferProtocol:Pro 协议发送到中心服" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=#e1d5e7;rounded=0;glass=0;dashed=1;sketch=0;strokeColor=#9673a6;" vertex="1" parent="QwG8HII2U616yksSc097-1">
           <mxGeometry x="720" y="110" width="280" height="20" as="geometry" />
-        </mxCell>
-        <mxCell id="w-wZ8tn7DGYByPFwAL4y-29" value="&lt;div style=&quot;text-align: left&quot;&gt;PlayerChangeZone()&lt;br&gt;&lt;/div&gt;" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=#e1d5e7;rounded=0;glass=0;dashed=1;sketch=0;strokeColor=#9673a6;" vertex="1" parent="QwG8HII2U616yksSc097-1">
-          <mxGeometry x="90" y="100" width="130" height="20" as="geometry" />
         </mxCell>
         <mxCell id="w-wZ8tn7DGYByPFwAL4y-30" value="" style="shape=umlLifeline;participant=umlActor;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;verticalAlign=top;spacingTop=36;outlineConnect=0;rounded=0;sketch=0;strokeColor=#b85450;fillColor=#f8cecc;" vertex="1" parent="QwG8HII2U616yksSc097-1">
           <mxGeometry x="40" y="40" width="20" height="1240" as="geometry" />
